@@ -1,10 +1,7 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: ["gatsby-plugin-emotion"],
+  siteMetadata: {
+    title: "Panthers Painting",
+    description: "Panthers Painting Atlanta website description",
+  },
+  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-react-helmet"],
 }
