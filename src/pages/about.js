@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 export default () => {
   return (
     <Layout>
-      <h1>Home</h1>
-      <p>Welcome to Panthers Painting</p>
-      <Link to="/about">About</Link>
+      <h1>About</h1>
+      <p>About Panthers Painting</p>
+      <Link to="/">Home</Link>
     </Layout>
   )
 }
