@@ -3,5 +3,11 @@ module.exports = {
     title: "Panthers Painting",
     description: "Panthers Painting Atlanta website description",
   },
-  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-react-helmet"],
+  plugins: [
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-react-helmet",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-chakra-ui",
+  ],
 }
