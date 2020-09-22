@@ -1,79 +1,31 @@
-import React, { Fragment } from "react"
-import { Global, css } from "@emotion/core"
+import React from "react"
 import Helmet from "react-helmet"
+import { ChakraProvider, Box } from "@chakra-ui/core"
+import defaultTheme from "../themes/default-theme"
 import useSiteMetadata from "../hooks/use-sitemetadata"
+import Topbar from "./topbar"
 import Header from "./header"
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
 
   return (
-    <Fragment>
-      <Global
-        styles={css`
-          * {
-            box-sizing: border-box;
-            margin: 0;
-          }
-
-          * + * {
-            margin-top: 1rem;
-          }
-
-          html,
-          body {
-            margin: 0;
-            color: #555;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-              Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-              sans-serif;
-            font-size: 18px;
-            line-height: 1.4;
-          }
-
-          > div {
-            margin-top: 0;
-          }
-
-          h1,
-          h2,
-          h3,
-          h4,
-          h5,
-          h6 {
-            color: #222;
-            line-height: 1.1;
-
-            + * {
-              margin-top: 0.5rem;
-            }
-          }
-
-          strong {
-            color: #222;
-          }
-
-          li {
-            margin-top: 0.25rem;
-          }
-        `}
-      />
+    <ChakraProvider resetCSS theme={defaultTheme}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        ></link>
       </Helmet>
+      <Topbar />
       <Header />
-      <main
-        css={css`
-          margin: 2rem auto 4rem;
-          max-width: 90vw;
-          width: 550px;
-        `}
-      >
+      <Box as="main" mx="auto" mt="4" mb="8" w="900px" maxW="90vw">
         {children}
-      </main>
-    </Fragment>
+      </Box>
+    </ChakraProvider>
   )
 }
 
