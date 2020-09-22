@@ -1,52 +1,37 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 import { Link } from "gatsby"
+import {
+  useColorMode,
+  useColorModeValue,
+  Flex,
+  HStack,
+  Image,
+  IconButton,
+} from "@chakra-ui/core"
+import { MoonIcon, SunIcon } from "@chakra-ui/icons"
+import NavLink from "./nav-link"
 
-const NavLink = styled(Link)`
-  color: #fff;
-  font-size: 1rem;
-  font-weight: ${props => props.fontWeight || "normal"};
-  line-height: 1;
-  margin: 0 0.5rem 0 0;
-  padding: 0.25rem;
-  text-decoration: none;
+const Header = () => {
+  const { toggleColorMode } = useColorMode()
+  const SwitchIcon = useColorModeValue(MoonIcon, SunIcon)
 
-  &.current-page {
-    border-bottom: 2px solid #fff;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-`
-
-const Header = () => (
-  <header
-    css={css`
-      background: tomato;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
-    `}
-  >
-    <NavLink to="/" fontWeight="bold">
-      Panthers Painting
-    </NavLink>
-    <nav
-      css={css`
-        margin-top: 0;
-      `}
+  return (
+    <Flex
+      px="calc((100vw - 900px - 0.5rem) / 2)"
+      justify="space-between"
+      borderBottom="1px solid #eee"
     >
-      <NavLink to="/" activeClassName="current-page">
-        Home
-      </NavLink>
-      <NavLink to="/about" activeClassName="current-page">
-        About
-      </NavLink>
-    </nav>
-  </header>
-)
-
+      <Link to="/">
+        <Image h="64px" src="/images/logo.png" alt="Panthers Painting" />
+      </Link>
+      <HStack as="nav" spacing="4">
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/services">Services</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/contact">Contact</NavLink>
+        <IconButton ml="4" onClick={toggleColorMode} icon={<SwitchIcon />} />
+      </HStack>
+    </Flex>
+  )
+}
 export default Header
