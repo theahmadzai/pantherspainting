@@ -4,7 +4,6 @@ module.exports = {
     description: "Panthers Painting Atlanta website description",
   },
   plugins: [
-    "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",

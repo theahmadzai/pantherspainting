@@ -1,16 +1,18 @@
-import React from "react"
+import React, { Fragment } from "react"
 import Helmet from "react-helmet"
 import { ChakraProvider, Box } from "@chakra-ui/core"
 import defaultTheme from "../themes/default-theme"
 import useSiteMetadata from "../hooks/use-sitemetadata"
-import Topbar from "./topbar"
 import Header from "./header"
+import Footer from "./Footer"
+import "antd/dist/antd.css"
+import "../styles/global.css"
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
 
   return (
-    <ChakraProvider resetCSS theme={defaultTheme}>
+    <Fragment>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -20,12 +22,14 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         ></link>
       </Helmet>
-      <Topbar />
       <Header />
-      <Box as="main" mx="auto" mt="4" mb="8" w="900px" maxW="90vw">
+
+      <Box as="main" mx="auto" w="1000px" maxW="90vw">
         {children}
       </Box>
-    </ChakraProvider>
+
+      <Footer />
+    </Fragment>
   )
 }
 

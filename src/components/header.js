@@ -17,12 +17,13 @@ const Header = () => {
 
   return (
     <Flex
-      px="calc((100vw - 900px - 0.5rem) / 2)"
+      as="header"
+      px="calc((100vw - 1000px - 0.5rem) / 2)"
       justify="space-between"
       borderBottom="1px solid #eee"
     >
       <Link to="/">
-        <Image h="64px" src="/images/logo.png" alt="Panthers Painting" />
+        <Image h="92px" src="/logo.svg" alt="Panthers Painting" />
       </Link>
       <HStack as="nav" spacing="4">
         <NavLink href="/">Home</NavLink>
