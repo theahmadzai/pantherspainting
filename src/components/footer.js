@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
         </Col>
       </Row>
-      <Row justify="left" style={{ padding: "0.25rem 0" }}>
+      <Row justify="center" style={{ paddingTop: "3rem" }}>
         <Col>
           <Paragraph style={{ borderBottom: "2px solid pink" }}>
             &copy; Copyright 2020 - Panthers Painting Atlanta

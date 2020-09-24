@@ -27,7 +27,7 @@
 .dropbg::after {
   position: absolute;
   top: 60%;
-  left: 60%;
+  left: 85%;
   content: "";
   z-index: -1000;
   display: block;

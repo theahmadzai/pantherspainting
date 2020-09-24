@@ -4,7 +4,7 @@ import { ChakraProvider, Box } from "@chakra-ui/core"
 import defaultTheme from "../themes/default-theme"
 import useSiteMetadata from "../hooks/use-sitemetadata"
 import Header from "./header"
-import Footer from "./Footer"
+import Footer from "./footer"
 import "antd/dist/antd.css"
 import "../styles/global.css"
 
