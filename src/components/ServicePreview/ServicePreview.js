@@ -1,5 +1,5 @@
-import React from "react"
-import { Card, Image } from "antd"
+import React from 'react'
+import { Card, Image } from 'antd'
 
 const { Meta } = Card
 

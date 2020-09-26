@@ -1,6 +1,6 @@
-import React from "react"
-import { Typography } from "antd"
-import Layout from "../components/Layout/Layout"
+import React from 'react'
+import { Typography } from 'antd'
+import Layout from '../components/Layout/Layout'
 
 const { Title, Paragraph } = Typography
 

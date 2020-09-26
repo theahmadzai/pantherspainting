@@ -1,5 +1,5 @@
-import React from "react"
-import { Row, Col, Typography } from "antd"
+import React from 'react'
+import { Row, Col, Typography } from 'antd'
 import {
   CompassOutlined,
   PhoneOutlined,
@@ -7,8 +7,8 @@ import {
   FacebookOutlined,
   TwitterOutlined,
   InstagramOutlined,
-} from "@ant-design/icons"
-import styles from "./Footer.module.css"
+} from '@ant-design/icons'
+import styles from './Footer.module.css'
 
 const { Title, Paragraph } = Typography
 
@@ -50,39 +50,39 @@ const Footer = () => {
             Subscribe to our RSS feed or follow us on Facebook and Twitter for
             the latest content
           </Paragraph>
-          <div style={{ fontSize: "2rem" }}>
+          <div style={{ fontSize: '2rem' }}>
             <FacebookOutlined
               title="Panthers Painting Facebook"
-              style={{ marginRight: "1rem" }}
+              style={{ marginRight: '1rem' }}
             />
             <TwitterOutlined
               title="Panthers Painting Twitter"
-              style={{ marginRight: "1rem" }}
+              style={{ marginRight: '1rem' }}
             />
             <InstagramOutlined title="Panthers Painting Instagram" />
           </div>
         </Col>
       </Row>
-      <Row justify="center" style={{ paddingTop: "3rem" }}>
+      <Row justify="center" style={{ paddingTop: '3rem' }}>
         <Col>
           <Paragraph
-            style={{ borderBottom: "2px dashed pink", fontSize: ".85rem" }}
+            style={{ borderBottom: '2px dashed pink', fontSize: '.85rem' }}
           >
             &copy; Copyright 2020 - Panthers Painting Atlanta
           </Paragraph>
         </Col>
       </Row>
       <Row>
-        <Col span={24} style={{ overflow: "hidden" }}>
+        <Col span={24} style={{ overflow: 'hidden' }}>
           <svg
             preserveAspectRatio="none"
             viewBox="0 0 1200 120"
             xmlns="http://www.w3.org/2000/svg"
             style={{
-              fill: "#f1dbfb",
-              width: "100%",
+              fill: '#f1dbfb',
+              width: '100%',
               height: 50,
-              transform: "rotate(180deg) scaleX(-1)",
+              transform: 'rotate(180deg) scaleX(-1)',
             }}
           >
             <path

@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { Row, Col, Typography } from "antd"
-import Layout from "../components/Layout/Layout"
-import ServicePreview from "../components/ServicePreview/ServicePreview"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Row, Col, Typography } from 'antd'
+import Layout from '../components/Layout/Layout'
+import ServicePreview from '../components/ServicePreview/ServicePreview'
 
 const { Title, Paragraph } = Typography
 
@@ -32,7 +32,7 @@ export default () => {
   return (
     <Layout>
       <Title>Services</Title>
-      <Paragraph style={{ fontSize: "1rem", marginBottom: "3rem" }}>
+      <Paragraph style={{ fontSize: '1rem', marginBottom: '3rem' }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eaque
         consequatur soluta possimus obcaecati error ut iste voluptatem. Ullam
         quo sunt animi voluptate vitae expedita, consequatur molestias adipisci
@@ -40,7 +40,7 @@ export default () => {
       </Paragraph>
       <Row gutter={32}>
         {services.allContentfulService.edges.map(({ node: service }, i) => (
-          <Col span={24} sm={12} md={8} style={{ marginBottom: "2rem" }}>
+          <Col span={24} sm={12} md={8} style={{ marginBottom: '2rem' }}>
             <ServicePreview {...service} key={i} />
           </Col>
         ))}

@@ -1,7 +1,7 @@
-import React from "react"
-import { Form, Input, Button } from "antd"
-import { UserOutlined, PhoneOutlined, MailOutlined } from "@ant-design/icons"
-import styles from "./ContactForm.module.css"
+import React from 'react'
+import { Form, Input, Button } from 'antd'
+import { UserOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons'
+import styles from './ContactForm.module.css'
 
 const { Item } = Form
 const { TextArea } = Input

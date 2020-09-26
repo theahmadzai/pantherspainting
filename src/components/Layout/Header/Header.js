@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Image } from "antd"
-import Navbar from "./Navbar/Navbar"
-import styles from "./Header.module.css"
+import React from 'react'
+import { Link } from 'gatsby'
+import { Image } from 'antd'
+import Navbar from './Navbar/Navbar'
+import styles from './Header.module.css'
 
 const Header = () => {
   return (

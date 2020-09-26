@@ -1,8 +1,8 @@
-import React from "react"
-import { Row, Col } from "antd"
-import Layout from "../components/Layout/Layout"
-import ContactForm from "../components/ContactForm/ContactForm"
-import ContactInfo from "../components/ContactInfo/ContactInfo"
+import React from 'react'
+import { Row, Col } from 'antd'
+import Layout from '../components/Layout/Layout'
+import ContactForm from '../components/ContactForm/ContactForm'
+import ContactInfo from '../components/ContactInfo/ContactInfo'
 
 export default () => {
   return (

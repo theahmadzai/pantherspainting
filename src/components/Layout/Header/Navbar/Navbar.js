@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from "react"
-import { Drawer } from "antd"
-import { MenuOutlined } from "@ant-design/icons"
-import NavLink from "./NavLink/NavLink"
-import styles from "./Navbar.module.css"
+import React, { Fragment, useState } from 'react'
+import { Drawer } from 'antd'
+import { MenuOutlined } from '@ant-design/icons'
+import NavLink from './NavLink/NavLink'
+import styles from './Navbar.module.css'
 
 const NavLinks = props => (
   <nav {...props}>

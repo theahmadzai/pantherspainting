@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Button } from "antd"
-import styles from "./NavLink.module.css"
+import React from 'react'
+import { Link } from 'gatsby'
+import { Button } from 'antd'
+import styles from './NavLink.module.css'
 
 const NavLink = ({ href, children, ...props }) => {
   return (

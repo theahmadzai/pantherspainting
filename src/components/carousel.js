@@ -1,11 +1,11 @@
-import React from "react"
-import { Carousel as AntdCarousel, Image } from "antd"
+import React from 'react'
+import { Carousel as AntdCarousel, Image } from 'antd'
 
 const images = [
-  "/images/carousel/1.jpg",
-  "/images/carousel/2.jpg",
-  "/images/carousel/3.jpg",
-  "/images/carousel/4.jpg",
+  '/images/carousel/1.jpg',
+  '/images/carousel/2.jpg',
+  '/images/carousel/3.jpg',
+  '/images/carousel/4.jpg',
 ]
 
 const Carousel = props => {
