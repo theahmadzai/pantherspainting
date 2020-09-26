@@ -10,6 +10,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
+    'prettier',
+    'prettier/react',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -26,5 +28,6 @@ module.exports = {
   },
   rules: {
     'react/prop-types': 0,
+    'react/display-name': 0,
   },
 }

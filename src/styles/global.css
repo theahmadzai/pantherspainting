@@ -2,6 +2,7 @@
   position: relative;
   z-index: 2000;
 }
+
 .mycooldiv::before {
   position: absolute;
   top: 0;
@@ -15,6 +16,7 @@
   border-width: 77px 0 77px 186px;
   border-color: transparent transparent transparent #f1dbfb;
 }
+
 .mycooldiv::after {
   position: absolute;
   top: 0;
