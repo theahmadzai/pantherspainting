@@ -1,3 +1,9 @@
+const dotenv = require("dotenv")
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config()
+}
+
 module.exports = {
   siteMetadata: {
     title: "Panthers Painting",
@@ -7,6 +13,13 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-chakra-ui",
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: "mx3s8y7n6py9",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        // downloadLocal: true,
+      },
+    },
   ],
 }

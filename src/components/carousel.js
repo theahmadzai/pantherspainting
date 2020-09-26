@@ -8,11 +8,11 @@ const images = [
   "/images/carousel/4.jpg",
 ]
 
-const Carousel = () => {
+const Carousel = props => {
   return (
-    <AntdCarousel autoplay>
+    <AntdCarousel autoplay effect="fade" {...props}>
       {images.map(image => (
-        <Image src={image} height={300} preview={false} />
+        <Image src={image} height={400} preview={false} />
       ))}
     </AntdCarousel>
   )

@@ -1,0 +1,55 @@
+.footer {
+  width: 90vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-top: 2px solid #f1dbfb;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+}
+
+.footerItems {
+  margin: 1rem 0;
+}
+
+.footerItem {
+  margin: 1rem 0;
+}
+
+.footerItemTitle {
+  background-image: url("/backpaint.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+@media screen and (min-width: 768px) {
+  .footer::before {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    content: "";
+    z-index: -1000;
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 6px solid #f1dbfb;
+    background: #d18cf1;
+    border-radius: 100%;
+  }
+
+  .footer::after {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    content: "";
+    z-index: -1000;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border: 20px solid #f1dbfb;
+    background: #d18cf1;
+    border-radius: 100%;
+  }
+}

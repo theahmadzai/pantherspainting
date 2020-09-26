@@ -1,12 +1,11 @@
 import React, { Fragment } from "react"
 import Helmet from "react-helmet"
-import { ChakraProvider, Box } from "@chakra-ui/core"
-import defaultTheme from "../themes/default-theme"
-import useSiteMetadata from "../hooks/use-sitemetadata"
-import Header from "./header"
-import Footer from "./footer"
+import useSiteMetadata from "../../hooks/use-sitemetadata"
+import Header from "./Header/Header"
+import Footer from "./Footer/Footer"
+import styles from "./Layout.module.css"
 import "antd/dist/antd.css"
-import "../styles/global.css"
+import "../../styles/global.css"
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -23,11 +22,7 @@ const Layout = ({ children }) => {
         ></link>
       </Helmet>
       <Header />
-
-      <Box as="main" mx="auto" w="1000px" maxW="90vw">
-        {children}
-      </Box>
-
+      <main className={styles.main}>{children}</main>
       <Footer />
     </Fragment>
   )

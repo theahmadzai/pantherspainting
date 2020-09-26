@@ -1,0 +1,28 @@
+.toggleNav {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.navMobile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navDesktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .toggleNav {
+    display: none !important;
+  }
+
+  .navMobile {
+    display: none;
+  }
+
+  .navDesktop {
+    display: flex;
+  }
+}

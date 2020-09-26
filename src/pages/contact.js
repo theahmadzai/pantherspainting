@@ -1,18 +1,20 @@
 import React from "react"
-import { Grid } from "@chakra-ui/core"
-import Layout from "../components/layout"
-import ContactForm from "../components/contact-form"
-import ContactInfo from "../components/contact-info"
-import Hero from "../components/hero"
+import { Row, Col } from "antd"
+import Layout from "../components/Layout/Layout"
+import ContactForm from "../components/ContactForm/ContactForm"
+import ContactInfo from "../components/ContactInfo/ContactInfo"
 
 export default () => {
   return (
     <Layout>
-      <Hero>Send Us a Message</Hero>
-      <Grid templateColumns="1fr 1fr" gap="8">
-        <ContactForm />
-        <ContactInfo />
-      </Grid>
+      <Row gutter={24}>
+        <Col span={24} md={12}>
+          <ContactInfo />
+        </Col>
+        <Col span={24} md={12}>
+          <ContactForm />
+        </Col>
+      </Row>
     </Layout>
   )
 }

@@ -1,21 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Row, Col, Typography } from "antd"
-import { Button } from "@chakra-ui/core"
-import Layout from "../components/layout"
-import Hero from "../components/hero"
+import Layout from "../components/Layout/Layout"
 import Carousel from "../components/carousel"
+import PainterIntro from "../components/PainterIntro/PainterIntro"
 
 const { Title, Paragraph } = Typography
 
 export default () => {
   return (
     <Layout>
-      <Carousel />
+      <Carousel style={{ marginTop: "-3rem" }} />
       <div style={{ overflow: "hidden" }}>
         <svg
           preserveAspectRatio="none"
-          viewBox="0 0 1200 120"
+          viewBox="0 0 600 120"
           xmlns="http://www.w3.org/2000/svg"
           style={{ fill: "#f1dbfb", width: "100%", height: 150 }}
         >
@@ -30,16 +28,27 @@ export default () => {
           <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
         </svg>
       </div>
-      {/* <Hero>Panthers Painting</Hero> */}
-      <Row justify="center" style={{ padding: "2rem" }}>
-        <Col span={18}>
-          <Title>Residential and Commercial Painting Service</Title>
-          <Title level={3} style={{ fontWeight: "300" }}>
+      <PainterIntro />
+      <Row style={{ marginBottom: "2rem" }}>
+        <Col md={12} style={{ padding: "2rem", background: "#d18cf1" }}>
+          <Title level={2} style={{ color: "#fff" }}>
+            Residential and Commercial Painting Service
+          </Title>
+          <Paragraph
+            style={{
+              color: "#fff",
+              fontSize: "1.1rem",
+              textAlign: "justify",
+            }}
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
             maxime vitae quod? Excepturi eius quisquam provident, deserunt eum,
             voluptate, magnam saepe voluptatem laudantium quam esse suscipit nam
             in necessitatibus earum?
-          </Title>
+          </Paragraph>
+        </Col>
+        <Col md={12}>
+          <Carousel />
         </Col>
       </Row>
     </Layout>

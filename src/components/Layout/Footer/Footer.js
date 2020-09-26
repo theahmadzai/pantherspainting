@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, Row, Col, Typography, Image } from "antd"
+import { Row, Col, Typography } from "antd"
 import {
   CompassOutlined,
   PhoneOutlined,
@@ -8,24 +8,16 @@ import {
   TwitterOutlined,
   InstagramOutlined,
 } from "@ant-design/icons"
+import styles from "./Footer.module.css"
 
 const { Title, Paragraph } = Typography
 
 const Footer = () => {
   return (
-    <Layout.Footer
-      style={{
-        width: "1000px",
-        margin: "0 auto",
-        padding: "0",
-        backgroundColor: "#fff",
-        borderTop: "2px solid #f1dbfb",
-        fontSize: "1rem",
-      }}
-    >
-      <Row gutter={24} className="dropbg" style={{ padding: "2rem 0" }}>
-        <Col md={8}>
-          <Title level={3} className="backpaint">
+    <footer className={styles.footer}>
+      <Row gutter={24} className={styles.footerItems}>
+        <Col md={8} className={styles.footerItem}>
+          <Title level={3} className={styles.footerItemTitle}>
             About Us
           </Title>
           <Paragraph ellipsis={{ rows: 2, expandable: true }}>
@@ -35,8 +27,8 @@ const Footer = () => {
             adipisci eius! Molestiae, obcaecati non.
           </Paragraph>
         </Col>
-        <Col md={8}>
-          <Title level={3} className="backpaint">
+        <Col md={8} className={styles.footerItem}>
+          <Title level={3} className={styles.footerItemTitle}>
             Contact Info
           </Title>
           <Paragraph>
@@ -50,8 +42,8 @@ const Footer = () => {
             <MailOutlined title="Email" /> info@pantherspainting.com
           </Paragraph>
         </Col>
-        <Col md={8}>
-          <Title level={3} className="backpaint">
+        <Col md={8} className={styles.footerItem}>
+          <Title level={3} className={styles.footerItemTitle}>
             Get in Touch
           </Title>
           <Paragraph>
@@ -73,7 +65,9 @@ const Footer = () => {
       </Row>
       <Row justify="center" style={{ paddingTop: "3rem" }}>
         <Col>
-          <Paragraph style={{ borderBottom: "2px solid pink" }}>
+          <Paragraph
+            style={{ borderBottom: "2px dashed pink", fontSize: ".85rem" }}
+          >
             &copy; Copyright 2020 - Panthers Painting Atlanta
           </Paragraph>
         </Col>
@@ -103,7 +97,7 @@ const Footer = () => {
           </svg>
         </Col>
       </Row>
-    </Layout.Footer>
+    </footer>
   )
 }
 

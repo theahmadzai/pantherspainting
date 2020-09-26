@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 calc((100vw - 90vw - 1rem) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 calc((100vw - 1000px - 1rem) / 2);
+  }
+}

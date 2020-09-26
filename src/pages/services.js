@@ -1,77 +1,50 @@
 import React from "react"
-import { Grid, Text } from "@chakra-ui/core"
-import Layout from "../components/layout"
-import Hero from "../components/hero"
-import ServicePreview from "../components/service-preview"
+import { graphql, useStaticQuery } from "gatsby"
+import { Row, Col, Typography } from "antd"
+import Layout from "../components/Layout/Layout"
+import ServicePreview from "../components/ServicePreview/ServicePreview"
 
-const services = [
-  {
-    image: "/images/services/painting.jpg",
-    title: "Painting",
-    caption: "Interior, Exterior, Residential, Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/pressure-wash.jpg",
-    title: "Pressure Wash",
-    caption: "Residential and Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/drywall.jpg",
-    title: "Drywall",
-    caption: "Residential and Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/carpentry.jpg",
-    title: "Carpentry",
-    caption: "Interior, Exterior, Residential, Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/siding.jpg",
-    title: "Siding",
-    caption: "Residential and Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/gutters.jpg",
-    title: "Gutters",
-    caption: "Residential and Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/decks.jpg",
-    title: "Decks",
-    caption: "Residential and Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/fences.jpg",
-    title: "Fences",
-    caption: "Residential and Commercial",
-    body: "some long content",
-  },
-  {
-    image: "/images/services/electrostatic-paint.jpg",
-    title: "Electrostatic Paint",
-    caption:
-      "Appliances, Outdoor Furniture, Metal Fencing, Schools and gym lockers ,etc; Residential and Commercial",
-    body: "some long content",
-  },
-]
+const { Title, Paragraph } = Typography
 
 export default () => {
+  const services = useStaticQuery(graphql`
+    query {
+      allContentfulService {
+        totalCount
+        edges {
+          node {
+            title
+            caption
+            body {
+              json
+            }
+            image {
+              fixed(quality: 70, height: 500, width: 400) {
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
-      <Hero>Services</Hero>
-      <Text pb="8" textAlign="center" fontWeight="300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eaque consequatur soluta possimus obcaecati error ut iste voluptatem. Ullam quo sunt animi voluptate vitae expedita, consequatur molestias adipisci doloremque autem.</Text>
-      <Grid templateColumns="repeat(3, 1fr)" gap={8}>
-        {services.map(service => (
-          <ServicePreview {...service} />
+      <Title>Services</Title>
+      <Paragraph style={{ fontSize: "1rem", marginBottom: "3rem" }}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eaque
+        consequatur soluta possimus obcaecati error ut iste voluptatem. Ullam
+        quo sunt animi voluptate vitae expedita, consequatur molestias adipisci
+        doloremque autem.
+      </Paragraph>
+      <Row gutter={32}>
+        {services.allContentfulService.edges.map(({ node: service }, i) => (
+          <Col span={24} sm={12} md={8} style={{ marginBottom: "2rem" }}>
+            <ServicePreview {...service} key={i} />
+          </Col>
         ))}
-      </Grid>
+      </Row>
     </Layout>
   )
 }
