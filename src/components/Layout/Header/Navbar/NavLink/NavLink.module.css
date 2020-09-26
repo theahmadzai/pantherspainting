@@ -1,16 +1,18 @@
-.bordered {
-  margin-left: 1rem;
-  border: 2px solid #d18cf1 !important;
+.link {
+  font-weight: 600 !important;
 }
 
-.active > .backpaint {
-  background-image: url('/backpaint.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.bordered {
+  margin-left: 0.5rem;
+  border: 2px solid #f1dbfb !important;
 }
 
 .active > .bordered {
+  border: none !important;
+}
+
+.active > .link {
   background: #d18cf1;
   color: #fff;
+  margin-left: 0.5rem;
 }

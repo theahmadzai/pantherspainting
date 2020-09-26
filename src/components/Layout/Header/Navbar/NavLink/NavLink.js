@@ -9,7 +9,7 @@ const NavLink = ({ href, children, bordered }) => {
       <Button
         type="text"
         size="large"
-        className={bordered ? styles.bordered : styles.backpaint}
+        className={`${bordered ? styles.bordered : ''} ${styles.link}`}
       >
         {children}
       </Button>
