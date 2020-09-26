@@ -1,6 +1,16 @@
-.active {
+.bordered {
+  margin-left: 1rem;
+  border: 2px solid #d18cf1 !important;
+}
+
+.active > .backpaint {
   background-image: url('/backpaint.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.active > .bordered {
+  background: #d18cf1;
+  color: #fff;
 }

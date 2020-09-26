@@ -40,8 +40,14 @@ export default () => {
       </Paragraph>
       <Row gutter={32}>
         {services.allContentfulService.edges.map(({ node: service }, i) => (
-          <Col span={24} sm={12} md={8} style={{ marginBottom: '2rem' }}>
-            <ServicePreview {...service} key={i} />
+          <Col
+            span={24}
+            sm={12}
+            md={8}
+            style={{ marginBottom: '2rem' }}
+            key={i}
+          >
+            <ServicePreview {...service} />
           </Col>
         ))}
       </Row>

@@ -3,10 +3,7 @@ import { Typography } from 'antd'
 import {
   UserOutlined,
   PhoneOutlined,
-  MailOutlined,
-  FacebookOutlined,
-  TwitterOutlined,
-  InstagramOutlined,
+  MailOutlined
 } from '@ant-design/icons'
 import styles from './ContactInfo.module.css'
 
@@ -43,11 +40,6 @@ const ContactInfo = () => {
           info@pantherspainting.com
         </Text>
       </Paragraph>
-
-      <div style={{ marginTop: '2rem' }}></div>
-      <FacebookOutlined style={{ fontSize: '2rem', marginRight: '1rem' }} />
-      <TwitterOutlined style={{ fontSize: '2rem', marginRight: '1rem' }} />
-      <InstagramOutlined style={{ fontSize: '2rem', marginRight: '1rem' }} />
     </Fragment>
   )
 }

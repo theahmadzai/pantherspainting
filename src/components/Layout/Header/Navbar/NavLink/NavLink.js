@@ -3,10 +3,14 @@ import { Link } from 'gatsby'
 import { Button } from 'antd'
 import styles from './NavLink.module.css'
 
-const NavLink = ({ href, children, ...props }) => {
+const NavLink = ({ href, children, bordered }) => {
   return (
     <Link to={href} activeClassName={styles.active}>
-      <Button type="text" size="large" {...props}>
+      <Button
+        type="text"
+        size="large"
+        className={bordered ? styles.bordered : styles.backpaint}
+      >
         {children}
       </Button>
     </Link>
