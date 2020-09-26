@@ -19,7 +19,7 @@
 }
 
 .footerItemTitle {
-  background-image: url("/backpaint.svg");
+  background-image: url('/backpaint.svg');
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -29,7 +29,7 @@
     position: absolute;
     top: 40%;
     left: 25%;
-    content: "";
+    content: '';
     z-index: -1000;
     display: block;
     height: 40px;
@@ -43,7 +43,7 @@
     position: absolute;
     top: 50%;
     right: 5%;
-    content: "";
+    content: '';
     z-index: -1000;
     display: block;
     height: 100px;
