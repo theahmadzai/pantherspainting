@@ -8,7 +8,7 @@
 }
 
 .active > .bordered {
-  border: none !important;
+  border-color: transparent !important;
 }
 
 .active > .link {
