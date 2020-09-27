@@ -7,9 +7,7 @@ const { Title, Paragraph } = Typography
 const ContactInfo = () => {
   return (
     <Fragment>
-      <Title className={styles.heading} level={1}>
-        Contact us.
-      </Title>
+      <Title className={styles.heading}>Contact us.</Title>
 
       <Paragraph className={styles.details}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum,

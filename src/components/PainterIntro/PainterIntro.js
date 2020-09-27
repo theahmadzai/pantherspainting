@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Row, Col, Typography, Image, Button } from 'antd'
 
 const { Title } = Typography
@@ -7,14 +8,18 @@ const PainterIntro = () => {
   return (
     <Row>
       <Col md={12} style={{ padding: '4rem 0' }}>
-        <Title>Residential and Commercial Painting Service</Title>
+        <Title>Panthers Painting Atlanta</Title>
         <Title level={3} style={{ fontWeight: '300' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat maxime
-          vitae quod? Excepturi eius quisquam provident.
+          Panthers Painting is dedicated to deliver the best services possible
+          using the right product and assigning experienced crew to bring
+          hundred percent customer satisfactions and make Atlanta more
+          beautiful.
         </Title>
-        <Button type="default" size="large">
-          Contact Us
-        </Button>
+        <Link to="/contact">
+          <Button type="default" size="large">
+            Contact Us
+          </Button>
+        </Link>
       </Col>
       <Col md={12}>
         <Image src="/painter.svg" alt="painter" />
