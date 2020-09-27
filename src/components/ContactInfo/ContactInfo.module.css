@@ -9,3 +9,13 @@
   font-weight: 400 !important;
   color: #f1dbfb;
 }
+
+.details {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .details {
+    padding-right: 7rem;
+  }
+}

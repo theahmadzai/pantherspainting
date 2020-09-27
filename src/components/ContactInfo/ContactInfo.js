@@ -1,13 +1,8 @@
 import React, { Fragment } from 'react'
 import { Typography } from 'antd'
-import {
-  UserOutlined,
-  PhoneOutlined,
-  MailOutlined
-} from '@ant-design/icons'
 import styles from './ContactInfo.module.css'
 
-const { Title, Paragraph, Text } = Typography
+const { Title, Paragraph } = Typography
 
 const ContactInfo = () => {
   return (
@@ -16,29 +11,11 @@ const ContactInfo = () => {
         Contact us.
       </Title>
 
-      <Paragraph style={{ fontSize: '1rem' }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-        nobis totam earum voluptatibus dolore! Excepturi, necessitatibus, error
-        ad accusantium dolores.
-      </Paragraph>
-
-      <Paragraph style={{ fontSize: '1rem' }}>
-        <UserOutlined />
-        <Text style={{ paddingLeft: '.5rem', textDecoration: 'underline' }}>
-          2153 Some Avenue, Some Road
-        </Text>
-      </Paragraph>
-      <Paragraph style={{ fontSize: '1rem' }}>
-        <PhoneOutlined />
-        <Text style={{ paddingLeft: '.5rem', textDecoration: 'underline' }}>
-          +312-512-3222
-        </Text>
-      </Paragraph>
-      <Paragraph style={{ fontSize: '1rem' }}>
-        <MailOutlined />
-        <Text style={{ paddingLeft: '.5rem', textDecoration: 'underline' }}>
-          info@pantherspainting.com
-        </Text>
+      <Paragraph className={styles.details}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum,
+        obcaecati voluptates neque exercitationem debitis asperiores, nam
+        facilis natus rem deserunt. Distinctio laudantium ex cum. Adipisci
+        possimus repudiandae iure illo?
       </Paragraph>
     </Fragment>
   )

@@ -1,15 +1,5 @@
 import React from 'react'
-import {
-  Form,
-  Input,
-  InputNumber,
-  Row,
-  Col,
-  Button,
-  Switch,
-  Typography,
-  Image,
-} from 'antd'
+import { Form, Input, Row, Col, Button, Typography, Image } from 'antd'
 import Layout from '../components/Layout/Layout'
 
 const { Title } = Typography
@@ -35,62 +25,55 @@ export default () => {
             <Row>
               <Col span={24} md={12}>
                 <Item label="First Name">
-                  <Input placeholder="First Name" />
+                  <Input placeholder="John" />
                 </Item>
               </Col>
               <Col span={24} md={12}>
                 <Item label="Last Name">
-                  <Input placeholder="Last Name" />
+                  <Input placeholder="Doe" />
                 </Item>
               </Col>
             </Row>
             <Row>
               <Col span={24} md={12}>
                 <Item label="Phone">
-                  <Input placeholder="Phone" addonBefore="+1" />
+                  <Input placeholder="+1322******" />
                 </Item>
               </Col>
               <Col span={24} md={12}>
                 <Item label="Email">
-                  <Input placeholder="Email" />
+                  <Input placeholder="john@example.com" />
                 </Item>
               </Col>
             </Row>
-            <Item
-              label="Zip Code"
-              labelCol={{ span: 4 }}
-              wrapperCol={{ span: 4 }}
-            >
-              <Input placeholder="Zip Code" />
-            </Item>
             <Item
               label="Address"
               labelCol={{ span: 4 }}
               wrapperCol={{ span: 20 }}
             >
-              <Input placeholder="Address..." />
+              <Input placeholder="House # 3.." />
             </Item>
             <Row>
-              <Col span={12}>
-                <Item label="Height">
-                  <InputNumber placeholder="Height" />
+              <Col span={24} md={12}>
+                <Item label="Street">
+                  <Input placeholder="Wall Street" />
                 </Item>
               </Col>
-              <Col span={12}>
-                <Item label="Width">
-                  <InputNumber placeholder="Width" />
+              <Col span={24} md={12}>
+                <Item label="City">
+                  <Input placeholder="New york" />
                 </Item>
               </Col>
             </Row>
             <Row>
-              <Col span={12}>
-                <Item label="Length">
-                  <InputNumber placeholder="Length" />
+              <Col span={24} md={12}>
+                <Item label="Zip Code">
+                  <Input placeholder="340222" />
                 </Item>
               </Col>
-              <Col span={12}>
-                <Item label="Linear">
-                  <Switch />
+              <Col span={24} md={12}>
+                <Item label="State">
+                  <Input placeholder="Georgia" />
                 </Item>
               </Col>
             </Row>
@@ -99,15 +82,15 @@ export default () => {
               labelCol={{ span: 4 }}
               wrapperCol={{ span: 20 }}
             >
-              <TextArea rows={6} />
+              <TextArea rows={6} placeholder="I want to get my home...." />
             </Item>
             <Item wrapperCol={{ offset: 4 }}>
-              <Button type="ghost">Request Quote</Button>
+              <Button type="ghost">Submit</Button>
             </Item>
           </Form>
         </Col>
         <Col md={8}>
-          <Image src="/postbox.svg" style={{ padding: '2rem 0 2rem 5rem' }} />
+          <Image src="/postman.svg" />
         </Col>
       </Row>
     </Layout>

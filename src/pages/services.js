@@ -19,7 +19,7 @@ export default () => {
               json
             }
             image {
-              fixed(quality: 70, height: 500, width: 400) {
+              fixed(quality: 70, height: 250, width: 400) {
                 src
               }
             }

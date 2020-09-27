@@ -18,23 +18,17 @@ const Footer = () => {
       <Row gutter={24} className={styles.footerItems}>
         <Col md={8} className={styles.footerItem}>
           <Title level={3} className={styles.footerItemTitle}>
-            About Us
+            Address
           </Title>
-          <Paragraph ellipsis={{ rows: 2, expandable: true }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-            cumque, asperiores consectetur consequuntur distinctio saepe
-            nesciunt temporibus quasi vel odit praesentium ad aut. Nemo error
-            adipisci eius! Molestiae, obcaecati non.
+          <Paragraph>
+            <CompassOutlined title="Office Address" /> Some Fake Address,
+            Atlanta, Georgia
           </Paragraph>
         </Col>
         <Col md={8} className={styles.footerItem}>
           <Title level={3} className={styles.footerItemTitle}>
             Contact Info
           </Title>
-          <Paragraph>
-            <CompassOutlined title="Office Address" /> Some Fake Address,
-            Atlanta, Georgia
-          </Paragraph>
           <Paragraph>
             <PhoneOutlined title="Contact" /> +1 (0) 222X3214
           </Paragraph>
