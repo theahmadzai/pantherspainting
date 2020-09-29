@@ -1,18 +1,27 @@
 import React from 'react'
-import { Carousel as AntdCarousel, Image } from 'antd'
-
-const images = [
-  '/carousel/1.jpg',
-  '/carousel/2.jpg',
-  '/carousel/3.jpg',
-  '/carousel/4.jpg',
-]
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import { Carousel as AntdCarousel } from 'antd'
 
 const Carousel = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      contentfulCarousel(name: { eq: "Home" }) {
+        images {
+          fixed(height: 400) {
+            ...GatsbyContentfulFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  const images = data.contentfulCarousel.images.map(image => image.fixed)
+
   return (
     <AntdCarousel autoplay effect="fade" {...props}>
       {images.map((image, i) => (
-        <Image key={i} src={image} height={400} preview={false} />
+        <Img key={i} fixed={image} />
       ))}
     </AntdCarousel>
   )

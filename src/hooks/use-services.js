@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 const useServices = () => {
-  const result = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       allContentfulService {
         nodes {
@@ -18,7 +18,7 @@ const useServices = () => {
     }
   `)
 
-  return result.allContentfulService.nodes.map(service => ({
+  return data.allContentfulService.nodes.map(service => ({
     title: service.title,
     slug: service.slug,
     caption: service.caption,

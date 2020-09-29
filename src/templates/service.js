@@ -29,7 +29,7 @@ const ServiceTemplate = ({ data: { contentfulService: service } }) => (
     <Row gutter={24}>
       <Col span={24} md={12}>
         <Img
-          style={{ height: '300px' }}
+          style={{ height: '300px', marginBottom: '1rem' }}
           fluid={service.image.fluid}
           alt={service.title}
         />

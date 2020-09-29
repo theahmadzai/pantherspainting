@@ -12,6 +12,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: 'images',
+      },
+    },
+    {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: 'mx3s8y7n6py9',
