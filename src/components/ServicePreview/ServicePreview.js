@@ -1,16 +1,20 @@
 import React from 'react'
-import { Card, Image } from 'antd'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
+import { Card } from 'antd'
 
 const { Meta } = Card
 
-const ServicePreview = ({ image, title, caption }) => (
-  <Card
-    hoverable
-    bordered={false}
-    cover={<Image src={image.fixed.src} alt={title} />}
-  >
-    <Meta title={title} description={caption} />
-  </Card>
+const ServicePreview = ({ thumbnail, title, slug, caption }) => (
+  <Link to={slug}>
+    <Card
+      hoverable
+      bordered={false}
+      cover={<Img fluid={thumbnail} alt={title} />}
+    >
+      <Meta title={title} description={caption} />
+    </Card>
+  </Link>
 )
 
 export default ServicePreview
