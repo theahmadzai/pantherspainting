@@ -10,10 +10,9 @@ const ContactInfo = () => {
       <Title className={styles.heading}>Contact us.</Title>
 
       <Paragraph className={styles.details}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum,
-        obcaecati voluptates neque exercitationem debitis asperiores, nam
-        facilis natus rem deserunt. Distinctio laudantium ex cum. Adipisci
-        possimus repudiandae iure illo?
+        We will be happy to get back to you as soon as possible. We appreciate
+        your feedback, if you have any suggestions or comments regarding our
+        improvement please share your idea with us.
       </Paragraph>
     </Fragment>
   )
