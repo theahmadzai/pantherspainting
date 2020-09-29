@@ -1,33 +1,14 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import { Row, Col, Button, Typography } from 'antd'
+import useServices from '../hooks/use-services'
 import Layout from '../components/Layout/Layout'
 import ServicePreview from '../components/ServicePreview/ServicePreview'
 
 const { Title, Paragraph } = Typography
 
 export default () => {
-  const services = useStaticQuery(graphql`
-    query {
-      allContentfulService {
-        totalCount
-        edges {
-          node {
-            title
-            caption
-            body {
-              json
-            }
-            image {
-              fixed(quality: 70, height: 250, width: 400) {
-                src
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const services = useServices()
 
   return (
     <Layout>
@@ -47,7 +28,7 @@ export default () => {
         </Button>
       </Link>
       <Row gutter={32}>
-        {services.allContentfulService.edges.map(({ node: service }, i) => (
+        {services.map((service, i) => (
           <Col
             span={24}
             sm={12}
