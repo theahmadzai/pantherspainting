@@ -22,8 +22,12 @@ export default () => {
             wrapperCol={{ span: 16 }}
             size="large"
             name="quote"
-            netlify
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
+            <input type="hidden" name="form-name" value="quote" />
+
             <Row>
               <Col span={24} md={12}>
                 <Item label="First Name">
