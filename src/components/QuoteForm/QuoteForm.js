@@ -161,6 +161,14 @@ const QuoteForm = () => {
                 required: true,
                 message: 'Please type your zipcode!',
               },
+              {
+                type: 'number',
+                message: 'Zipcode can only be numeric!',
+              },
+              {
+                len: 5,
+                message: 'Please type a valid zipcode!',
+              },
             ]}
             required
           >
