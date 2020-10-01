@@ -48,7 +48,9 @@ const ContactForm = () => {
       </Item>
 
       <Item>
-        <Button>Submit</Button>
+        <Button type="ghost" htmlType="submit">
+          Submit
+        </Button>
       </Item>
     </Form>
   )

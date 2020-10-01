@@ -95,7 +95,9 @@ export default () => {
               />
             </Item>
             <Item wrapperCol={{ offset: 4 }}>
-              <Button type="ghost">Submit</Button>
+              <Button type="ghost" htmlType="submit">
+                Submit
+              </Button>
             </Item>
           </Form>
         </Col>
