@@ -53,3 +53,15 @@
     border-radius: 100%;
   }
 }
+
+.copyright {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright span {
+  text-align: center;
+  font-size: 0.85rem;
+  border-bottom: 2px dashed #f7bbc5;
+}
