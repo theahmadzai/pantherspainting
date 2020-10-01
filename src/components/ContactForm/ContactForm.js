@@ -1,25 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Form, Input, Button } from 'antd'
 import { UserOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons'
+import Success from '../Results/Success'
+import Error from '../Results/Error'
 import styles from './ContactForm.module.css'
 
 const { Item } = Form
 const { TextArea } = Input
 
 const ContactForm = () => {
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-  }
+  const [formStatus, setFormStatus] = useState(0)
 
   const handleFinish = values => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...values }),
+      body: new URLSearchParams({
+        'form-name': 'contact',
+        ...values,
+      }).toString(),
     })
+      .then(() => setFormStatus(1))
+      .catch(() => setFormStatus(-1))
   }
+
+  if (formStatus === 1) return <Success />
+  else if (formStatus === -1) return <Error />
 
   return (
     <Form

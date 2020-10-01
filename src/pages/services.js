@@ -3,16 +3,17 @@ import { Link } from 'gatsby'
 import { Row, Col, Button, Typography } from 'antd'
 import useServices from '../hooks/use-services'
 import Layout from '../components/Layout/Layout'
+import PageTitle from '../components/PageTitle/PageTitle'
 import ServicePreview from '../components/ServicePreview/ServicePreview'
 
-const { Title, Paragraph } = Typography
+const { Paragraph } = Typography
 
 export default () => {
   const services = useServices()
 
   return (
     <Layout>
-      <Title style={{ fontWeight: 300, textAlign: 'center' }}>Services</Title>
+      <PageTitle>Services</PageTitle>
       <Paragraph style={{ fontSize: '1rem', textAlign: 'center' }}>
         We have different experienced teams that can take care of variety of
         services besides painting. We do carpentry, gutter, interior and

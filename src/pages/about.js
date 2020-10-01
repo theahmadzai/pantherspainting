@@ -1,13 +1,15 @@
 import React from 'react'
 import { Typography, Row, Col, Image } from 'antd'
 import Layout from '../components/Layout/Layout'
+import PageTitle from '../components/PageTitle/PageTitle'
 
 const { Title, Paragraph } = Typography
 
 export default () => {
   return (
     <Layout>
-      <Title style={{ fontWeight: 300, textAlign: 'center' }}>About Us</Title>
+      <PageTitle>About Us</PageTitle>
+
       <Paragraph style={{ fontSize: '1rem', textAlign: 'center' }}>
         Panthers Painting is a growing company registered in 2020, but our crew
         have years of experience in their fields of profession. They have served
