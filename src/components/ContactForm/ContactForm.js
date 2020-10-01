@@ -46,7 +46,6 @@ const ContactForm = () => {
       >
         <Input
           type="text"
-          name="name"
           placeholder="John Doe"
           prefix={<UserOutlined className={styles.icon} />}
         />
@@ -69,7 +68,6 @@ const ContactForm = () => {
       >
         <Input
           type="email"
-          name="email"
           placeholder="john@example.com"
           prefix={<MailOutlined className={styles.icon} />}
         />
@@ -78,7 +76,6 @@ const ContactForm = () => {
       <Item label="Phone" name="phone">
         <Input
           type="tel"
-          name="phone"
           placeholder="+123********"
           prefix={<PhoneOutlined className={styles.icon} />}
         />
@@ -90,7 +87,7 @@ const ContactForm = () => {
         rules={[{ required: true, message: 'Please type a brief message!' }]}
         required
       >
-        <TextArea name="message" aplaceholder="Your message..." rows={5} />
+        <TextArea aplaceholder="Your message..." rows={5} />
       </Item>
 
       <Item>
