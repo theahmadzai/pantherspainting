@@ -28,6 +28,7 @@ const QuoteForm = () => {
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
       size="large"
+      colon={false}
       scrollToFirstError
       method="post"
       data-netlify="true"
@@ -88,11 +89,13 @@ const QuoteForm = () => {
           <Item
             label="Email"
             name="email"
-            rules={{
-              type: 'email',
-              message: 'Please type a valid email!',
-            }}
-            required
+            rules={[
+              { required: false },
+              {
+                type: 'email',
+                message: 'Please type a valid email!',
+              },
+            ]}
           >
             <Input placeholder="john@example.com" />
           </Item>
