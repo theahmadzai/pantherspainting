@@ -7,23 +7,34 @@ const { Item } = Form
 const { TextArea } = Input
 
 const ContactForm = () => {
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
+  const handleFinish = values => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...values }),
+    })
+  }
+
   return (
     <Form
       className={styles.form}
       layout="vertical"
       size="large"
-      id="contact"
-      name="contact"
       method="post"
       scrollToFirstError
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      onFinish={handleFinish}
       noValidate
     >
-      <input type="hidden" name="form-name" value="contact" />
-
       <Item
-        label="Your Name"
+        label="Full Name"
         name="name"
         rules={[
           {
@@ -83,7 +94,7 @@ const ContactForm = () => {
       </Item>
 
       <Item>
-        <Button form="contact" type="ghost" htmlType="submit">
+        <Button type="ghost" htmlType="submit">
           Submit
         </Button>
       </Item>
