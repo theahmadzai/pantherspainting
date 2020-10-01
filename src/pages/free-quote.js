@@ -21,28 +21,30 @@ export default () => {
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 16 }}
             size="large"
+            name="quote"
+            netlify
           >
             <Row>
               <Col span={24} md={12}>
                 <Item label="First Name">
-                  <Input placeholder="John" />
+                  <Input placeholder="John" name="firstname" />
                 </Item>
               </Col>
               <Col span={24} md={12}>
                 <Item label="Last Name">
-                  <Input placeholder="Doe" />
+                  <Input placeholder="Doe" name="lastname" />
                 </Item>
               </Col>
             </Row>
             <Row>
               <Col span={24} md={12}>
                 <Item label="Phone">
-                  <Input placeholder="+1322******" />
+                  <Input placeholder="+1322******" name="phone" />
                 </Item>
               </Col>
               <Col span={24} md={12}>
                 <Item label="Email">
-                  <Input placeholder="john@example.com" />
+                  <Input placeholder="john@example.com" name="email" />
                 </Item>
               </Col>
             </Row>
@@ -51,7 +53,7 @@ export default () => {
               labelCol={{ span: 4 }}
               wrapperCol={{ span: 20 }}
             >
-              <Input placeholder="House # 3.." />
+              <Input placeholder="House # 3.." name="address" />
             </Item>
             <Row>
               <Col span={24} md={12}>
@@ -61,19 +63,19 @@ export default () => {
               </Col>
               <Col span={24} md={12}>
                 <Item label="City">
-                  <Input placeholder="New york" />
+                  <Input placeholder="New york" name="city" />
                 </Item>
               </Col>
             </Row>
             <Row>
               <Col span={24} md={12}>
                 <Item label="Zip Code">
-                  <Input placeholder="340222" />
+                  <Input placeholder="340222" name="zipcode" />
                 </Item>
               </Col>
               <Col span={24} md={12}>
                 <Item label="State">
-                  <Input placeholder="Georgia" />
+                  <Input placeholder="Georgia" name="state" />
                 </Item>
               </Col>
             </Row>
@@ -82,7 +84,11 @@ export default () => {
               labelCol={{ span: 4 }}
               wrapperCol={{ span: 20 }}
             >
-              <TextArea rows={6} placeholder="I want to get my home...." />
+              <TextArea
+                rows={6}
+                placeholder="I want to get my home...."
+                name="description"
+              />
             </Item>
             <Item wrapperCol={{ offset: 4 }}>
               <Button type="ghost">Submit</Button>
