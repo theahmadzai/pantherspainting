@@ -7,7 +7,7 @@ import ContactInfo from '../components/ContactInfo/ContactInfo'
 export default () => {
   return (
     <Layout>
-      <Row gutter={24}>
+      <Row>
         <Col span={24} md={12}>
           <ContactInfo />
         </Col>
