@@ -12,6 +12,7 @@ const ContactForm = () => {
       className={styles.form}
       layout="vertical"
       size="large"
+      id="contact"
       name="contact"
       method="post"
       scrollToFirstError
@@ -82,7 +83,7 @@ const ContactForm = () => {
       </Item>
 
       <Item>
-        <Button type="ghost" htmlType="submit">
+        <Button form="contact" type="ghost" htmlType="submit">
           Submit
         </Button>
       </Item>
