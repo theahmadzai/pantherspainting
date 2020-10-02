@@ -23,7 +23,7 @@ module.exports = {
   plugins: ['import', 'react', 'react-hooks', 'jsx-a11y'],
   settings: {
     react: {
-      version: '16.12.0',
+      version: 'detect',
     },
   },
   rules: {
