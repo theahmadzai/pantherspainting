@@ -1,5 +1,11 @@
 .title {
-  font-weight: 300 !important;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 3rem !important;
+  align-items: center;
+}
+
+.titleText {
+  font-weight: 300;
+  padding-left: 0.5rem;
 }
