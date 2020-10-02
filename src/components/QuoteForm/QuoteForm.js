@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Row, Col, Form, Input, Button } from 'antd'
 import Success from '../Results/Success'
 import Error from '../Results/Error'
+import styles from './QuoteForm.module.css'
 
 const { Item } = Form
 const { TextArea } = Input
@@ -24,6 +25,7 @@ const QuoteForm = () => {
 
   return (
     <Form
+      className={styles.form}
       layout="horizontal"
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
