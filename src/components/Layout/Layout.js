@@ -4,7 +4,6 @@ import useSiteMetadata from '../../hooks/use-sitemetadata'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import styles from './Layout.module.css'
-import 'antd/dist/antd.css'
 import '../../styles/global.css'
 
 const Layout = ({ children }) => {
