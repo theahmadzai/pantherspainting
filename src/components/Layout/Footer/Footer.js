@@ -16,13 +16,13 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Row gutter={24} className={styles.footerItems}>
-        <Col md={8} className={styles.footerItem}>
+        <Col span={24} md={8} className={styles.footerItem}>
           <Title level={3} className={styles.footerItemTitle}>
             Address
           </Title>
           <Paragraph>Some Fake Address, Atlanta, Georgia</Paragraph>
         </Col>
-        <Col md={8} className={styles.footerItem}>
+        <Col span={24} md={8} className={styles.footerItem}>
           <Title level={3} className={styles.footerItemTitle}>
             Contact Info
           </Title>
@@ -34,7 +34,7 @@ const Footer = () => {
             &nbsp; info@pantherspainting.com
           </Paragraph>
         </Col>
-        <Col md={8} className={styles.footerItem}>
+        <Col span={24} md={8} className={styles.footerItem}>
           <Title level={3} className={styles.footerItemTitle}>
             Get in Touch
           </Title>
