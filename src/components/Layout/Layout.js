@@ -4,9 +4,8 @@ import useSiteMetadata from '../../hooks/use-sitemetadata'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import styles from './Layout.module.css'
-import '../../styles/global.css'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, ...props }) => {
   const { title, description } = useSiteMetadata()
 
   return (
@@ -17,7 +16,9 @@ const Layout = ({ children }) => {
         <meta name="description" content={description} />
       </Helmet>
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main} {...props}>
+        {children}
+      </main>
       <Footer />
     </Fragment>
   )
