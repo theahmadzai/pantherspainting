@@ -3,6 +3,18 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 module.exports = {
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'mx3s8y7n6py9',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+  ],
   siteMetadata: {
     name: 'Panthers Painting',
     title: 'Panthers Painting',
@@ -19,16 +31,4 @@ module.exports = {
     },
     copyrights: 'Copyright 2020 - Panthers Painting Atlanta',
   },
-  plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-source-contentful',
-      options: {
-        spaceId: 'mx3s8y7n6py9',
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-  ],
 }
