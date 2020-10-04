@@ -32,9 +32,6 @@ const QuoteForm = () => {
       size="large"
       colon={false}
       scrollToFirstError
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       onFinish={handleFinish}
       noValidate
     >

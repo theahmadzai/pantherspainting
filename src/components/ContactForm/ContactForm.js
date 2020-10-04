@@ -32,10 +32,7 @@ const ContactForm = () => {
       className={styles.form}
       layout="vertical"
       size="large"
-      method="post"
       scrollToFirstError
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       onFinish={handleFinish}
       noValidate
     >
@@ -93,7 +90,7 @@ const ContactForm = () => {
         rules={[{ required: true, message: 'Please type a brief message!' }]}
         required
       >
-        <TextArea aplaceholder="Your message..." rows={5} />
+        <TextArea placeholder="Your message..." rows={5} />
       </Item>
 
       <Item>
