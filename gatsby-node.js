@@ -16,7 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allContentfulService.nodes.forEach(({ slug }) => {
     actions.createPage({
       path: `/services/${slug}`,
-      component: require.resolve('./src/templates/service.js'),
+      component: require.resolve('./src/templates/Service/Service.js'),
       context: {
         slug: slug,
       },

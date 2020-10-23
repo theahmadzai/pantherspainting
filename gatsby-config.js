@@ -1,13 +1,32 @@
-const dotenv = require('dotenv')
+const path = require('path')
 const lessToJson = require('less-to-json')
-
-dotenv.config()
+const { siteMetadata, manifest } = require('./config')
+require('dotenv').config({ path: '.env' })
 
 module.exports = {
+  siteMetadata,
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: manifest,
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'src', 'images'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'mx3s8y7n6py9',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: 'gatsby-plugin-antd',
       options: {
@@ -23,35 +42,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: 'images',
-      },
-    },
-    {
-      resolve: 'gatsby-source-contentful',
-      options: {
-        spaceId: 'mx3s8y7n6py9',
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
+    'gatsby-plugin-minify-classnames',
+    'gatsby-plugin-offline',
   ],
-  siteMetadata: {
-    name: 'Panthers Painting',
-    title: 'Panthers Painting',
-    description: 'Panthers Painting Atlanta website description',
-    address: 'Some Fake Address, Atlanta, Georgia',
-    contacts: {
-      phone: '+1 (0) 222X3214',
-      email: 'info@pantherspainting.com',
-    },
-    social: {
-      facebook: 'https://www.facebook.com/pantherspainting',
-      twitter: 'https://www.twitter.com/@pantherspainting',
-      instagram: 'https://www.instagram.com/pantherspainting',
-    },
-    copyrights: 'Copyright 2020 - Panthers Painting Atlanta',
-  },
 }

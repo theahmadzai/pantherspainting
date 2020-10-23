@@ -1,1 +1,3 @@
-## Panthers Painting Atlanta
+# Panthers Painting
+
+Panthers Painting Atlanta
