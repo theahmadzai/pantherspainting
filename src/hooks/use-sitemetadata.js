@@ -8,17 +8,7 @@ const useSiteMetadata = () => {
           name
           title
           description
-          address
-          contacts {
-            phone
-            email
-          }
-          social {
-            facebook
-            twitter
-            instagram
-          }
-          copyrights
+          url
         }
       }
     }

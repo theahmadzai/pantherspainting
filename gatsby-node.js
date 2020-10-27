@@ -1,5 +1,9 @@
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const result = await graphql(`
+exports.createPages = async ({
+  actions: { createPage },
+  graphql,
+  reporter,
+}) => {
+  const { data, errors } = await graphql(`
     query {
       allContentfulService {
         nodes {
@@ -9,16 +13,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  if (result.errors) {
-    reporter.panic('failed to create services', result.errors)
+  if (errors) {
+    reporter.panic('failed to create services', errors)
+    return
   }
 
-  result.data.allContentfulService.nodes.forEach(({ slug }) => {
-    actions.createPage({
-      path: `/services/${slug}`,
+  data.allContentfulService.nodes.forEach(({ slug }) => {
+    createPage({
+      path: `/service/${slug}`,
       component: require.resolve('./src/templates/Service/Service.js'),
       context: {
-        slug: slug,
+        slug,
       },
     })
   })

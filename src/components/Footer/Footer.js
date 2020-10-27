@@ -7,14 +7,16 @@ import {
   TwitterOutlined,
   InstagramOutlined,
 } from '@ant-design/icons'
-import useSiteMetadata from '../../../hooks/use-sitemetadata'
-import FooterCurve from '../../Svgs/FooterCurve'
+import useSiteMetadata from '../../hooks/use-sitemetadata'
+import FooterCurve from '../Svgs/FooterCurve'
 import styles from './Footer.module.css'
+import config from '../../../config'
 
 const { Title, Paragraph } = Typography
 
 const Footer = () => {
-  const { name, address, contacts, social, copyrights } = useSiteMetadata()
+  const { name, title } = useSiteMetadata()
+  const { address, contacts, social } = config
 
   return (
     <footer className={styles.footer}>
@@ -63,7 +65,9 @@ const Footer = () => {
       </Row>
 
       <div className={styles.copyrights}>
-        <span>&copy; {copyrights}</span>
+        <span>
+          &copy; Copyright {new Date().getFullYear()} - {title}
+        </span>
       </div>
 
       <FooterCurve />

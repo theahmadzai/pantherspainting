@@ -1,26 +1,22 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
-import useSiteMetadata from '../../hooks/use-sitemetadata'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import styles from './Layout.module.css'
 
-const Layout = ({ children, ...props }) => {
-  const { title, description } = useSiteMetadata()
-
+const Layout = ({ children }) => {
   return (
-    <Fragment>
+    <>
       <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
       <Header />
-      <main className={styles.main} {...props}>
-        {children}
-      </main>
+      <main className={styles.main}>{children}</main>
       <Footer />
-    </Fragment>
+    </>
   )
 }
 

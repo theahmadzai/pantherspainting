@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
     name: 'Panthers Painting',
-    title: 'Panthers Painting',
+    title: 'Panthers Painting Atlanta',
     description: 'Panthers Painting Atlanta website description',
     url: 'http://localhost:8000',
     logoUrl: 'static/icon.png',
   },
 
   manifest: {
-    name: 'Panthers Painting',
+    name: 'Panthers Painting Atlanta',
     short_name: 'Panthers Painting',
     start_url: '/',
     background_color: '#d18cf1',

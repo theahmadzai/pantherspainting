@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Image } from 'antd'
-import useSiteMetadata from '../../../hooks/use-sitemetadata'
-import Navbar from './Navbar/Navbar'
+import Navbar from '../Navbar/Navbar'
 import styles from './Header.module.css'
+import useSiteMetadata from '../../hooks/use-sitemetadata'
 
 const Header = () => {
   const { title } = useSiteMetadata()
@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="/">
-        <Image height={92} src="/logo.svg" alt={title} />
+        <Image height={92} width={92} src="/logo1.svg" alt={title} />
       </Link>
 
       <Navbar />

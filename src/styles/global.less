@@ -1,17 +1,43 @@
-@import '~antd/dist/antd.css';
-
 :root {
   --primary-color: #f1dbfb;
   --secondary-color: #d18cf1;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+.pageTitleBackground {
+  background-position: center top;
+  background-size: cover;
+  height: 30vh;
+  filter: grayscale(40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3rem;
+}
+
+.pageTitle {
+  padding: 1.5rem 3rem;
+  color: #fff !important;
+  // background: #000;
+  // opacity: 0.5;
+  text-align: center;
+  position: relative;
+}
+
+.pageTitle::after {
+  content: '';
+  left: 50%;
+  top: calc(50% + 5rem);
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .pageTitle::after {
+    top: calc(50% + 3.5rem);
+  }
 }
 
 .mycooldiv {

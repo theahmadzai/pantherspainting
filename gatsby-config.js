@@ -10,10 +10,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-manifest',
-      options: manifest,
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
@@ -43,6 +39,10 @@ module.exports = {
       },
     },
     'gatsby-plugin-minify-classnames',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: manifest,
+    },
     'gatsby-plugin-offline',
   ],
 }

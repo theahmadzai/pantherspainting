@@ -6,7 +6,7 @@ import { Card } from 'antd'
 const { Meta } = Card
 
 const ServicePreview = ({ thumbnail, title, slug, caption }) => (
-  <Link to={slug}>
+  <Link to={`/service/${slug}`}>
     <Card
       hoverable
       bordered={false}
