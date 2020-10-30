@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import Img from 'gatsby-image'
-import { Typography, Row, Col } from 'antd'
+import { Typography } from 'antd'
 import Layout from '../components/Layout/Layout'
 import styles from './about.module.less'
 
@@ -45,15 +45,8 @@ export default () => {
         satisfaction. Panthers Painting is always considering experienced crew
         for its projects.
       </Paragraph>
-      <Img
-        fluid={aboutPainter.sharp.fluid}
-        style={{
-          margin: '0 auto',
-          width: '500px',
-          height: '500px',
-          borderRadius: '50% 50% 0 0',
-        }}
-      />
+
+      <Img fluid={aboutPainter.sharp.fluid} className={styles.aboutPainter} />
     </Layout>
   )
 }
