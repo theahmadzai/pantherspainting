@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row, Col, Form, Input, Button } from 'antd'
+import { Row, Col, Form, Input, Button, InputNumber } from 'antd'
 import Success from '../Results/Success'
 import Error from '../Results/Error'
 import styles from './QuoteForm.module.css'
@@ -26,16 +26,14 @@ const QuoteForm = () => {
   return (
     <Form
       className={styles.form}
-      layout="horizontal"
-      labelCol={{ span: 8 }}
-      wrapperCol={{ span: 16 }}
+      layout="vertical"
       size="large"
       colon={false}
-      scrollToFirstError
       onFinish={handleFinish}
+      scrollToFirstError
       noValidate
     >
-      <Row>
+      <Row gutter={32}>
         <Col span={24} md={12}>
           <Item
             label="First Name"
@@ -46,7 +44,6 @@ const QuoteForm = () => {
                 message: 'Please type your first name!',
               },
             ]}
-            required
           >
             <Input placeholder="John" />
           </Item>
@@ -61,14 +58,13 @@ const QuoteForm = () => {
                 message: 'Please type your last name!',
               },
             ]}
-            required
           >
             <Input placeholder="Doe" />
           </Item>
         </Col>
       </Row>
 
-      <Row>
+      <Row gutter={32}>
         <Col span={24} md={12}>
           <Item
             label="Phone"
@@ -79,7 +75,6 @@ const QuoteForm = () => {
                 message: 'Please type your phone no!',
               },
             ]}
-            required
           >
             <Input placeholder="+1322******" />
           </Item>
@@ -104,20 +99,17 @@ const QuoteForm = () => {
       <Item
         label="Address"
         name="address"
-        labelCol={{ span: 4 }}
-        wrapperCol={{ span: 20 }}
         rules={[
           {
             required: true,
             message: 'Please type your address!',
           },
         ]}
-        required
       >
         <Input placeholder="House # 3.." />
       </Item>
 
-      <Row>
+      <Row gutter={32}>
         <Col span={24} md={12}>
           <Item
             label="Street"
@@ -128,7 +120,6 @@ const QuoteForm = () => {
                 message: 'Please type your street address!',
               },
             ]}
-            required
           >
             <Input placeholder="Wall Street" />
           </Item>
@@ -143,14 +134,13 @@ const QuoteForm = () => {
                 message: 'Please type your city name!',
               },
             ]}
-            required
           >
             <Input placeholder="New york" />
           </Item>
         </Col>
       </Row>
 
-      <Row>
+      <Row gutter={32}>
         <Col span={24} md={12}>
           <Item
             label="Zip Code"
@@ -161,15 +151,10 @@ const QuoteForm = () => {
                 message: 'Please type your zipcode!',
               },
               {
-                type: 'number',
-                message: 'Zipcode can only be numeric!',
-              },
-              {
                 len: 5,
                 message: 'Please type a valid zipcode!',
               },
             ]}
-            required
           >
             <Input placeholder="340222" />
           </Item>
@@ -184,7 +169,6 @@ const QuoteForm = () => {
                 message: 'Please type your state name!',
               },
             ]}
-            required
           >
             <Input placeholder="Georgia" />
           </Item>
@@ -194,20 +178,17 @@ const QuoteForm = () => {
       <Item
         label="Description"
         name="description"
-        labelCol={{ span: 4 }}
-        wrapperCol={{ span: 20 }}
         rules={[
           {
             required: true,
             message: 'Please type some message!',
           },
         ]}
-        required
       >
         <TextArea rows={6} placeholder="I want to get my home...." />
       </Item>
 
-      <Item wrapperCol={{ offset: 4 }}>
+      <Item>
         <Button type="ghost" htmlType="submit">
           Submit
         </Button>

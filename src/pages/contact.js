@@ -1,17 +1,13 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-import { Row, Col, Typography } from 'antd'
+import { Row, Col, Typography, Collapse } from 'antd'
 import Layout from '../components/Layout/Layout'
-import PageTitle from '../components/PageTitle/PageTitle'
 import ContactForm from '../components/ContactForm/ContactForm'
-import ContactInfo from '../components/ContactInfo/ContactInfo'
-
-import { Collapse } from 'antd'
+import styles from './contact.module.less'
 
 const { Panel } = Collapse
-
-const { Title } = Typography
+const { Title, Paragraph } = Typography
 
 function callback(key) {
   console.log(key)
@@ -43,11 +39,12 @@ export default () => {
         className="pageTitleBackground"
       >
         <Title className="pageTitle">Send Us a Message</Title>
-        {/* <PageTitle>Contact Us</PageTitle> */}
       </BackgroundImage>
-      <Row style={{ paddingTop: '2rem' }} gutter={48}>
+      <Row gutter={32}>
         <Col span={24} md={12}>
-          <ContactInfo />
+          <Paragraph className={styles.contact}>
+            Please send us a message if you have any request or referrals.
+          </Paragraph>
           <Title level={5}>F.A.Q</Title>
           <Collapse defaultActiveKey={['1']} onChange={callback}>
             <Panel header="This is panel header 1" key="1">

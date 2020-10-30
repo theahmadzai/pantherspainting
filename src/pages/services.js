@@ -5,6 +5,7 @@ import useServices from '../hooks/use-services'
 import Layout from '../components/Layout/Layout'
 import PageTitle from '../components/PageTitle/PageTitle'
 import ServicePreview from '../components/ServicePreview/ServicePreview'
+import styles from './services.module.less'
 
 const { Paragraph } = Typography
 
@@ -14,11 +15,13 @@ export default () => {
   return (
     <Layout>
       <PageTitle>Services</PageTitle>
-      <Paragraph style={{ fontSize: '1rem', textAlign: 'center' }}>
-        We have different experienced teams that can take care of variety of
-        services besides painting. We do carpentry, gutter, interior and
-        exterior painting, fencing, pressure washing etc. you can ask for a free
-        quote anytime our estimators can give you same day quote.
+      <Paragraph className={styles.servicesDescriptionText}>
+        Panthers Painting Atlanta accepts residential construction painting and
+        epairing services. We are trying to provide the best services with the
+        most reasonable price. Our estimates are always free, we encourage you
+        to provide us with the complete information for preparing an estimate
+        report by clicking the free Estimate tab provided at the top right of
+        the page and we will be able to provide you an estimate within 2 days.
       </Paragraph>
       <Link to="/free-quote">
         <Button

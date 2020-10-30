@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Form, Input, Button } from 'antd'
+import { Form, Input, Button, Typography } from 'antd'
 import { UserOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons'
 import Success from '../Results/Success'
 import Error from '../Results/Error'
 import styles from './ContactForm.module.css'
 
+const { Title } = Typography
 const { Item } = Form
 const { TextArea } = Input
 
@@ -36,6 +37,10 @@ const ContactForm = () => {
       onFinish={handleFinish}
       noValidate
     >
+      <Title level={2} className={styles.heading}>
+        Have a Query?
+      </Title>
+
       <Item
         label="Full Name"
         name="name"

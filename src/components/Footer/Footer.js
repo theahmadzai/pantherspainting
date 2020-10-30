@@ -34,10 +34,12 @@ const Footer = () => {
           </Title>
           <Paragraph>
             <PhoneOutlined title="Phone" />
+            &nbsp;&nbsp;
             {contacts.phone}
           </Paragraph>
           <Paragraph>
             <MailOutlined title="Email" />
+            &nbsp;&nbsp;
             {contacts.email}
           </Paragraph>
         </Col>

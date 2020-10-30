@@ -10,8 +10,8 @@ const NavLinks = props => (
     <NavLink href="/services">Services</NavLink>
     <NavLink href="/about">About</NavLink>
     <NavLink href="/contact">Contact</NavLink>
-    <NavLink href="/free-quote" bordered>
-      Free Quote
+    <NavLink href="/free-estimate" bordered>
+      Free Estimate
     </NavLink>
   </nav>
 )

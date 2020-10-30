@@ -1,55 +1,59 @@
 import React from 'react'
-import { Typography, Row, Col, Image } from 'antd'
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
+import { Typography, Row, Col } from 'antd'
 import Layout from '../components/Layout/Layout'
-import PageTitle from '../components/PageTitle/PageTitle'
+import styles from './about.module.less'
 
 const { Title, Paragraph } = Typography
 
 export default () => {
+  const { about, aboutPainter } = useStaticQuery(graphql`
+    query {
+      about: file(relativePath: { eq: "about.jpg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      aboutPainter: file(relativePath: { eq: "about-painter.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
-      <PageTitle>About Us</PageTitle>
+      <BackgroundImage
+        fluid={about.sharp.fluid}
+        className="pageTitleBackground"
+      >
+        <Title className="pageTitle">About Us</Title>
+      </BackgroundImage>
 
-      <Paragraph style={{ fontSize: '1rem', textAlign: 'center' }}>
-        Panthers Painting is a growing company registered in 2020, but our crew
-        have years of experience in their fields of profession. They have served
-        all over Atlanta area and have accomplished tons of projects with
-        customer satisfaction. P.Painting is always considering seasoned and
-        experienced crew for its projects.
+      <Paragraph className={styles.about}>
+        Panthers Painting is a Georgia State certified company its main goal is
+        to provide the best services for a reasonable price. Our crew have years
+        of experience in their fields of profession. They have served all over
+        Atlanta area and have accomplished tons of projects with customer
+        satisfaction. Panthers Painting is always considering experienced crew
+        for its projects.
       </Paragraph>
-
-      <Row gutter={24} style={{ marginBottom: '2rem', marginTop: '5rem' }}>
-        <Col span={24} sm={6}>
-          <Image src="/johndoe.jpg" height="220px" />
-        </Col>
-        <Col span={24} sm={18}>
-          <Title level={3} style={{ fontWeight: '400' }}>
-            John Doe
-          </Title>
-          <Paragraph>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
-            error cupiditate iusto quo maiores quasi repudiandae eum, voluptate
-            vitae earum quisquam! Sapiente est dolor nihil? Officiis pariatur
-            eius praesentium! Nemo?
-          </Paragraph>
-        </Col>
-      </Row>
-      <Row gutter={24}>
-        <Col span={24} sm={6}>
-          <Image src="/johnwick.jpg" height="220px" />
-        </Col>
-        <Col span={24} sm={18}>
-          <Title level={3} style={{ fontWeight: '400' }}>
-            John Wick
-          </Title>
-          <Paragraph>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
-            error cupiditate iusto quo maiores quasi repudiandae eum, voluptate
-            vitae earum quisquam! Sapiente est dolor nihil? Officiis pariatur
-            eius praesentium! Nemo?
-          </Paragraph>
-        </Col>
-      </Row>
+      <Img
+        fluid={aboutPainter.sharp.fluid}
+        style={{
+          margin: '0 auto',
+          width: '500px',
+          height: '500px',
+          borderRadius: '50% 50% 0 0',
+        }}
+      />
     </Layout>
   )
 }

@@ -20,7 +20,7 @@ module.exports = {
   address: 'Some Fake Address, Atlanta, Georgia',
 
   contacts: {
-    phone: '+1 (0) 222X3214',
+    phone: '+1 (516) 939-5810',
     email: 'info@pantherspainting.com',
   },
 
