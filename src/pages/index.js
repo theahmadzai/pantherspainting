@@ -1,14 +1,27 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import { Row, Col, Typography, Button, Image } from 'antd'
 import Layout from '../components/Layout/Layout'
-import Carousel from '../components/carousel'
+import Carousel from '../components/Carousel/carousel'
 import HomeCurve from '../components/Svgs/HomeCurve'
 import styles from './index.module.less'
 
 const { Title, Paragraph } = Typography
 
 export default () => {
+  const { painter } = useStaticQuery(graphql`
+    query {
+      painter: file(relativePath: { eq: "painter.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <Carousel style={{ marginTop: '-3rem' }} />
@@ -16,7 +29,7 @@ export default () => {
       <HomeCurve />
 
       <Row>
-        <Col md={12} className={styles.introBox}>
+        <Col md={12}>
           <Title>Panthers Painting Atlanta</Title>
           <Paragraph>
             Panthers Painting is dedicated to deliver the best services possible
@@ -28,7 +41,7 @@ export default () => {
           </Link>
         </Col>
         <Col md={12}>
-          <Image src="/painter.svg" alt="painter" />
+          <Img fluid={painter.sharp.fluid} />
         </Col>
       </Row>
     </Layout>

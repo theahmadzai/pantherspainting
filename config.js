@@ -17,7 +17,7 @@ module.exports = {
     icon: 'static/icon.png',
   },
 
-  address: 'Some Fake Address, Atlanta, Georgia',
+  address: 'Office Address, Atlanta, Georgia',
 
   contacts: {
     phone: '+1 (516) 939-5810',
