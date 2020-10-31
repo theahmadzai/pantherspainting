@@ -36,6 +36,7 @@ export default () => {
       >
         <Title className="pageTitle">About Us</Title>
       </BackgroundImage>
+      <img src="/src/images/about.jpg" alt="about" />
 
       <Paragraph className={styles.about}>
         Panthers Painting is a Georgia State certified company its main goal is
