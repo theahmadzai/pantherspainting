@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="/">
-        <Image height={92} width={92} src="/logo.svg" alt={title} />
+        <Image src="/logo.svg" alt={title} />
       </Link>
 
       <Navbar />
