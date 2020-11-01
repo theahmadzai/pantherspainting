@@ -1,6 +1,6 @@
 import React from 'react'
 import { Result, Button } from 'antd'
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/layout/layout'
 
 export default () => (
   <Layout>

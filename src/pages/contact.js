@@ -3,8 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import { Row, Col, Typography } from 'antd'
-import Layout from '../components/Layout/Layout'
-import ContactForm from '../components/ContactForm/ContactForm'
+import Layout from '../components/layout/layout'
+import ContactForm from '../components/contact-form'
 import styles from './contact.module.less'
 
 const { Title, Paragraph } = Typography

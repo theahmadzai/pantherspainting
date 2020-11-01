@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Row, Col, Button, Typography } from 'antd'
 import useServices from '../hooks/use-services'
-import Layout from '../components/Layout/Layout'
-import PageTitle from '../components/PageTitle/PageTitle'
-import ServicePreview from '../components/ServicePreview/ServicePreview'
+import Layout from '../components/layout/layout'
+import PageTitle from '../components/page-title'
+import ServicePreview from '../components/service-preview'
 import styles from './services.module.less'
 
 const { Paragraph } = Typography

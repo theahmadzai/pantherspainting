@@ -8,8 +8,8 @@ import {
   InstagramOutlined,
 } from '@ant-design/icons'
 import useSiteMetadata from '../../hooks/use-sitemetadata'
-import FooterCurve from '../Svgs/FooterCurve'
-import styles from './Footer.module.css'
+import FooterCurve from '../svgs/footer-curve'
+import styles from './footer.module.less'
 import config from '../../../config'
 
 const { Title, Paragraph } = Typography

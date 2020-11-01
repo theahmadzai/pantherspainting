@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import Img from 'gatsby-image'
 import { Typography } from 'antd'
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/layout/layout'
 import styles from './about.module.less'
 
 const { Title, Paragraph } = Typography

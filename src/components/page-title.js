@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography } from 'antd'
-import PaintBucket from '../Svgs/PaintBucket'
-import styles from './PageTitle.module.css'
+import PaintBucket from './svgs/paint-bucket'
+import styles from './page-title.module.less'
 
 const { Title } = Typography
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-import styles from './Layout.module.css'
+import Header from './header'
+import Footer from './footer'
+import styles from './layout.module.less'
 
 const Layout = ({ children }) => {
   return (

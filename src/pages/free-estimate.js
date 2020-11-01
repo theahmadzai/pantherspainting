@@ -1,12 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-import { Row, Col, Typography, Image } from 'antd'
-import Layout from '../components/Layout/Layout'
-import QuoteForm from '../components/QuoteForm/QuoteForm'
-import styles from './free-estimate.module.less'
+import { Typography } from 'antd'
+import Layout from '../components/layout/layout'
+import QuoteForm from '../components/quote-form'
 
-const { Title, Paragraph } = Typography
+const { Title } = Typography
 
 export default () => {
   const { quote } = useStaticQuery(graphql`

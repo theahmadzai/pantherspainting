@@ -21,7 +21,7 @@ exports.createPages = async ({
   data.allContentfulService.nodes.forEach(({ slug }) => {
     createPage({
       path: `/service/${slug}`,
-      component: require.resolve('./src/templates/Service/Service.js'),
+      component: require.resolve('./src/templates/service.js'),
       context: {
         slug,
       },

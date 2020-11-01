@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { Row, Col, Typography, Button, Image } from 'antd'
-import Layout from '../components/Layout/Layout'
-import Carousel from '../components/Carousel/carousel'
-import HomeCurve from '../components/Svgs/HomeCurve'
-import styles from './index.module.less'
+import { Row, Col, Typography, Button } from 'antd'
+import Layout from '../components/layout/layout'
+import Carousel from '../components/carousel'
+import HomeCurve from '../components/svgs/home-curve'
 
 const { Title, Paragraph } = Typography
 

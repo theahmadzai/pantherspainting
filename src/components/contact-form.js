@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Form, Input, Button, Typography } from 'antd'
 import { UserOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons'
-import Success from '../Results/Success'
-import Error from '../Results/Error'
-import styles from './ContactForm.module.css'
+import Success from './success'
+import Error from './error'
+import styles from './contact-form.module.less'
 
 const { Title } = Typography
 const { Item } = Form

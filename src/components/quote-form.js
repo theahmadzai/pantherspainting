@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Row, Col, Form, Input, Button, InputNumber } from 'antd'
-import Success from '../Results/Success'
-import Error from '../Results/Error'
-import styles from './QuoteForm.module.css'
+import { Row, Col, Form, Input, Button } from 'antd'
+import Success from './success'
+import Error from './error'
+import styles from './quote-form.module.less'
 
 const { Item } = Form
 const { TextArea } = Input

@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import { Drawer } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
-import NavLink from '../NavLink/NavLink'
-import styles from './Navbar.module.css'
+import NavLink from './nav-link'
+import styles from './navbar.module.less'
 
 const NavLinks = props => (
   <nav {...props}>

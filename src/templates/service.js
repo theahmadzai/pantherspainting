@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Row, Col, Typography } from 'antd'
 import Img from 'gatsby-image'
-import Layout from '../../components/Layout/Layout'
+import Layout from '../components/layout/layout'
 
 const { Title, Paragraph } = Typography
 
