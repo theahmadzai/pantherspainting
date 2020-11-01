@@ -5,6 +5,7 @@ import { Row, Col, Typography, Button } from 'antd'
 import Layout from '../components/layout/layout'
 import Carousel from '../components/carousel'
 import HomeCurve from '../components/svgs/home-curve'
+import styles from './index.module.less'
 
 const { Title, Paragraph } = Typography
 
@@ -23,7 +24,7 @@ export default () => {
 
   return (
     <Layout>
-      <Carousel style={{ marginTop: '-3rem' }} />
+      <Carousel className={styles.carousel} />
 
       <HomeCurve />
 

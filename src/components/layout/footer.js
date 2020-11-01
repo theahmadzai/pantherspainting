@@ -23,61 +23,62 @@ const Footer = () => {
   } = config
 
   return (
-    <footer className={styles.footer}>
-      <Row gutter={24} className={styles.footerItems}>
-        <Col span={24} md={8} className={styles.footerItem}>
-          <Title level={3} className={styles.footerItemTitle}>
-            Company
-          </Title>
-          <Paragraph>{description}</Paragraph>
-        </Col>
+    <>
+      <footer className={styles.footer}>
+        <Row gutter={24} className={styles.footerItems}>
+          <Col span={24} md={8} className={styles.footerItem}>
+            <Title level={3} className={styles.footerItemTitle}>
+              Company
+            </Title>
+            <Paragraph>{description}</Paragraph>
+          </Col>
 
-        <Col span={24} md={8} className={styles.footerItem}>
-          <Title level={3} className={styles.footerItemTitle}>
-            Contact Info
-          </Title>
-          <Paragraph>
-            <PhoneOutlined title="Phone" />
-            &nbsp;&nbsp;
-            {contacts.phone}
-          </Paragraph>
-          <Paragraph>
-            <MailOutlined title="Email" />
-            &nbsp;&nbsp;
-            {contacts.email}
-          </Paragraph>
-        </Col>
+          <Col span={24} md={8} className={styles.footerItem}>
+            <Title level={3} className={styles.footerItemTitle}>
+              Contact Info
+            </Title>
+            <Paragraph>
+              <PhoneOutlined title="Phone" />
+              &nbsp;&nbsp;
+              {contacts.phone}
+            </Paragraph>
+            <Paragraph>
+              <MailOutlined title="Email" />
+              &nbsp;&nbsp;
+              {contacts.email}
+            </Paragraph>
+          </Col>
 
-        <Col span={24} md={8} className={styles.footerItem}>
-          <Title level={3} className={styles.footerItemTitle}>
-            Get in Touch
-          </Title>
-          <Paragraph>
-            Subscribe to our RSS feed or follow us on Facebook and Twitter for
-            the latest content
-          </Paragraph>
-          <div className={styles.icons}>
-            <a href={social.facebook} rel="noreferrer" target="_blank">
-              <FacebookOutlined title={`${name} Facebook`} />
-            </a>
-            <a href={social.twitter} rel="noreferrer" target="_blank">
-              <TwitterOutlined title={`${name} Twitter`} />
-            </a>
-            <a href={social.instagram} rel="noreferrer" target="_blank">
-              <InstagramOutlined title={`${name} Instagram`} />
-            </a>
-          </div>
-        </Col>
-      </Row>
+          <Col span={24} md={8} className={styles.footerItem}>
+            <Title level={3} className={styles.footerItemTitle}>
+              Get in Touch
+            </Title>
+            <Paragraph>
+              Subscribe to our RSS feed or follow us on Facebook and Twitter for
+              the latest content
+            </Paragraph>
+            <div className={styles.icons}>
+              <a href={social.facebook} rel="noreferrer" target="_blank">
+                <FacebookOutlined title={`${name} Facebook`} />
+              </a>
+              <a href={social.twitter} rel="noreferrer" target="_blank">
+                <TwitterOutlined title={`${name} Twitter`} />
+              </a>
+              <a href={social.instagram} rel="noreferrer" target="_blank">
+                <InstagramOutlined title={`${name} Instagram`} />
+              </a>
+            </div>
+          </Col>
+        </Row>
 
-      <div className={styles.copyrights}>
-        <span>
-          &copy; Copyright {new Date().getFullYear()} - {title}
-        </span>
-      </div>
-
+        <div className={styles.copyrights}>
+          <span>
+            &copy; Copyright {new Date().getFullYear()} - {title}
+          </span>
+        </div>
+      </footer>
       <FooterCurve />
-    </footer>
+    </>
   )
 }
 
