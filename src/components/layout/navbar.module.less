@@ -1,28 +1,26 @@
 .toggleNav {
   display: block;
   font-size: 1.5rem;
+
+  @media screen and (min-width: 768px) {
+    display: none !important;
+  }
 }
 
 .navMobile {
   display: flex;
-  align-items: center;
+  text-align: center;
   flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .navDesktop {
   display: none;
-}
 
-@media screen and (min-width: 768px) {
-  .toggleNav {
-    display: none !important;
-  }
-
-  .navMobile {
-    display: none;
-  }
-
-  .navDesktop {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
 }

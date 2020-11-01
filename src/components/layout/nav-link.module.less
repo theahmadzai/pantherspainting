@@ -1,29 +1,35 @@
 .link {
-  font-weight: 600 !important;
-  font-size: 0.95rem !important;
-  margin: 0.4rem;
-}
+  display: block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+  color: #000;
+  transition: background 800ms ease;
+  border: 2px solid transparent;
 
-@media screen and (min-width: 768px) {
-  .link {
-    margin: 0 0.4rem;
+  &:hover {
+    color: #000;
+    background: #f9f9f9;
   }
 
-  .link:last-child {
-    margin-right: 0;
+  @media screen and (min-width: 768px) {
+    margin: 0 0.4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .bordered {
-  border: 2px solid #f1dbfb !important;
+  border: 2px solid var(--primary-color);
 }
 
-.active > .bordered {
-  border-color: transparent !important;
-}
-
-.active > .link {
-  background: #d18cf1;
-  color: #fff;
+.active {
+  background: var(--secondary-color) !important;
+  color: #fff !important;
   margin-left: 0.5rem;
+  border: 2px solid transparent;
 }
