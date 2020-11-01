@@ -28,7 +28,7 @@ export default () => {
       <HomeCurve />
 
       <Row>
-        <Col md={12}>
+        <Col span={24} md={12}>
           <Title>Panthers Painting Atlanta</Title>
           <Paragraph>
             Panthers Painting is dedicated to deliver the best services possible
@@ -39,7 +39,7 @@ export default () => {
             <Button>Contact Us</Button>
           </Link>
         </Col>
-        <Col md={12}>
+        <Col span={24} md={12}>
           <Img fluid={painter.sharp.fluid} />
         </Col>
       </Row>

@@ -16,16 +16,20 @@ const { Title, Paragraph } = Typography
 
 const Footer = () => {
   const { name, title } = useSiteMetadata()
-  const { address, contacts, social } = config
+  const {
+    siteMetadata: { description },
+    contacts,
+    social,
+  } = config
 
   return (
     <footer className={styles.footer}>
       <Row gutter={24} className={styles.footerItems}>
         <Col span={24} md={8} className={styles.footerItem}>
           <Title level={3} className={styles.footerItemTitle}>
-            Address
+            Company
           </Title>
-          <Paragraph>{address}</Paragraph>
+          <Paragraph>{description}</Paragraph>
         </Col>
 
         <Col span={24} md={8} className={styles.footerItem}>

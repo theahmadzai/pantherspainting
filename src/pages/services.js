@@ -15,6 +15,7 @@ export default () => {
   return (
     <Layout>
       <PageTitle>Services</PageTitle>
+
       <Paragraph className={styles.servicesDescriptionText}>
         Panthers Painting Atlanta accepts residential construction painting and
         epairing services. We are trying to provide the best services with the
@@ -23,23 +24,19 @@ export default () => {
         report by clicking the free Estimate tab provided at the top right of
         the page and we will be able to provide you an estimate within 2 days.
       </Paragraph>
-      <Link to="/free-quote">
+
+      <Link to="/free-estimate">
         <Button
           type="ghost"
           style={{ display: 'block', margin: '0 auto 3rem' }}
         >
-          Ask For a Free Quote
+          Ask For a Free Estimate
         </Button>
       </Link>
-      <Row gutter={32}>
+
+      <Row gutter={[32, 32]}>
         {services.map((service, i) => (
-          <Col
-            span={24}
-            sm={12}
-            md={8}
-            style={{ marginBottom: '2rem' }}
-            key={i}
-          >
+          <Col span={24} sm={12} md={8} key={i}>
             <ServicePreview {...service} />
           </Col>
         ))}
