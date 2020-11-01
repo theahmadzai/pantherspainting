@@ -1,0 +1,29 @@
+.link {
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  margin: 0.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .link {
+    margin: 0 0.4rem;
+  }
+
+  .link:last-child {
+    margin-right: 0;
+  }
+}
+
+.bordered {
+  border: 2px solid #f1dbfb !important;
+}
+
+.active > .bordered {
+  border-color: transparent !important;
+}
+
+.active > .link {
+  background: #d18cf1;
+  color: #fff;
+  margin-left: 0.5rem;
+}
