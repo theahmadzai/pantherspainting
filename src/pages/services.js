@@ -3,18 +3,21 @@ import { Link } from 'gatsby'
 import { Row, Col, Button, Typography } from 'antd'
 import useServices from '../hooks/use-services'
 import Layout from '../components/layout/layout'
-import PageTitle from '../components/page-title'
 import ServicePreview from '../components/service-preview'
+import PaintBucket from '../components/svgs/paint-bucket'
 import styles from './services.module.less'
 
-const { Paragraph } = Typography
+const { Title, Paragraph } = Typography
 
 export default () => {
   const services = useServices()
 
   return (
     <Layout>
-      <PageTitle>Services</PageTitle>
+      <Title className={styles.title}>
+        <PaintBucket />
+        <span className={styles.titleText}>Services</span>
+      </Title>
 
       <Paragraph className={styles.servicesDescriptionText}>
         Panthers Painting Atlanta accepts residential construction painting and

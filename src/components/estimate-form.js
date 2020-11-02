@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Row, Col, Form, Input, Button } from 'antd'
 import Success from './success'
 import Error from './error'
-import styles from './quote-form.module.less'
+import styles from './estimate-form.module.less'
 
 const { Item } = Form
 const { TextArea } = Input

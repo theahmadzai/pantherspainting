@@ -37,10 +37,6 @@ const ContactForm = () => {
       onFinish={handleFinish}
       noValidate
     >
-      <Title level={2} className={styles.heading}>
-        Have a Query?
-      </Title>
-
       <Item
         label="Full Name"
         name="name"
@@ -50,7 +46,6 @@ const ContactForm = () => {
             message: 'Please type your full name!',
           },
         ]}
-        required
       >
         <Input
           type="text"
@@ -72,7 +67,6 @@ const ContactForm = () => {
             message: 'Please type a valid email!',
           },
         ]}
-        required
       >
         <Input
           type="email"

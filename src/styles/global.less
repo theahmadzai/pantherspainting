@@ -37,36 +37,3 @@
     top: calc(50% + 3.5rem);
   }
 }
-
-.mycooldiv {
-  position: relative;
-  z-index: 2000;
-}
-
-.mycooldiv::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1000;
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 77px 0 77px 186px;
-  border-color: transparent transparent transparent #f1dbfb;
-}
-
-.mycooldiv::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1000;
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 200px 0 0 200px;
-  border-color: transparent transparent transparent #f1dbfb;
-}

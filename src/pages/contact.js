@@ -1,8 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
-import { Row, Col, Typography } from 'antd'
+import { Row, Col, Typography, Button } from 'antd'
 import Layout from '../components/layout/layout'
 import ContactForm from '../components/contact-form'
 import styles from './contact.module.less'
@@ -40,9 +40,24 @@ export default () => {
       </BackgroundImage>
       <Row gutter={32}>
         <Col span={24} md={12}>
-          <Paragraph className={styles.contact}>
+          <Title level={2} className={styles.heading}>
+            Have a Query?
+          </Title>
+
+          <Paragraph>
             Please send us a message if you have any request or referrals.
           </Paragraph>
+
+          <Paragraph>
+            Want to know what services do we provide? Please have a look at the
+            list of services we are currently providing.
+          </Paragraph>
+
+          <Link to="/services">
+            <Button className={styles.button} type="primary">
+              Services
+            </Button>
+          </Link>
 
           <Img fluid={sendMessage.sharp.fluid} />
         </Col>

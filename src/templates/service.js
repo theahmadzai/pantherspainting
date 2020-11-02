@@ -28,7 +28,7 @@ export const query = graphql`
 
 const ServiceTemplate = ({ data: { contentfulService: service } }) => (
   <Layout>
-    <Row gutter={24}>
+    <Row gutter={32}>
       <Col span={24} md={12}>
         <Img
           className={styles.image}

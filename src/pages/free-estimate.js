@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Typography } from 'antd'
 import Layout from '../components/layout/layout'
-import QuoteForm from '../components/quote-form'
+import EstimateForm from '../components/estimate-form'
 
 const { Title } = Typography
 
@@ -29,7 +29,7 @@ export default () => {
         <Title className="pageTitle">Ask For a Free Estimate</Title>
       </BackgroundImage>
 
-      <QuoteForm />
+      <EstimateForm />
     </Layout>
   )
 }
