@@ -76,7 +76,7 @@ const QuoteForm = () => {
               },
             ]}
           >
-            <Input placeholder="+1322******" />
+            <Input placeholder="+123********" />
           </Item>
         </Col>
         <Col span={24} md={12}>
@@ -121,7 +121,7 @@ const QuoteForm = () => {
               },
             ]}
           >
-            <Input placeholder="Wall Street" />
+            <Input placeholder="Carroll Street" />
           </Item>
         </Col>
         <Col span={24} md={12}>
@@ -135,7 +135,7 @@ const QuoteForm = () => {
               },
             ]}
           >
-            <Input placeholder="New york" />
+            <Input placeholder="Atlanta" />
           </Item>
         </Col>
       </Row>
@@ -156,7 +156,7 @@ const QuoteForm = () => {
               },
             ]}
           >
-            <Input placeholder="340222" />
+            <Input placeholder="30301" />
           </Item>
         </Col>
         <Col span={24} md={12}>
@@ -185,7 +185,7 @@ const QuoteForm = () => {
           },
         ]}
       >
-        <TextArea rows={6} placeholder="I want to get my home...." />
+        <TextArea rows={6} placeholder="Additional details..." />
       </Item>
 
       <Item>
