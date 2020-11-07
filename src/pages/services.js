@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import { Row, Col, Button, Typography } from 'antd'
 import useServices from '../hooks/use-services'
@@ -11,6 +11,12 @@ const { Title, Paragraph } = Typography
 
 export default () => {
   const services = useServices()
+
+  useEffect(() => {
+    fetch('./netlify/functions/rating-count').then(res => {
+      console.log(res.json())
+    })
+  }, [])
 
   return (
     <Layout>

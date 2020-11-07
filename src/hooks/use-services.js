@@ -19,10 +19,11 @@ const useServices = () => {
   `)
 
   return data.allContentfulService.nodes.map(service => ({
+    thumbnail: service.image.fluid,
     title: service.title,
     slug: service.slug,
     caption: service.caption,
-    thumbnail: service.image.fluid,
+    ratingCount: 3,
   }))
 }
 
