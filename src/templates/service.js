@@ -34,7 +34,7 @@ const ServiceTemplate = ({
   const [rating, setRating] = useState(5)
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
-  const { ratings } = useRatings()
+  // const { ratings } = useRatings()
 
   const submitReview = useCallback(() => {
     fetch('/.netlify/functions/create-rating', {
@@ -62,12 +62,7 @@ const ServiceTemplate = ({
         </Col>
         <Col span={24} md={12}>
           <Title>{service.title}</Title>
-          <Rate
-            allowHalf
-            value={ratings[slug].rating}
-            defaultValue={5}
-            disabled
-          />
+          <Rate allowHalf value={5} defaultValue={5} disabled />
 
           <Paragraph type="secondary">{service.caption}</Paragraph>
           <Paragraph>{documentToReactComponents(service.body.json)}</Paragraph>
