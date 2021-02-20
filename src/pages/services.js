@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import { Row, Col, Button, Typography } from 'antd'
 import useServices from '../hooks/use-services'
@@ -12,12 +12,6 @@ const { Title, Paragraph } = Typography
 export default () => {
   const services = useServices()
 
-  useEffect(() => {
-    fetch('./netlify/functions/rating-count').then(res => {
-      console.log(res.json())
-    })
-  }, [])
-
   return (
     <Layout>
       <Title className={styles.title}>
@@ -27,7 +21,7 @@ export default () => {
 
       <Paragraph className={styles.servicesDescriptionText}>
         Panthers Painting Atlanta accepts residential construction painting and
-        epairing services. We are trying to provide the best services with the
+        repairing services. We are trying to provide the best services with the
         most reasonable price. Our estimates are always free, we encourage you
         to provide us with the complete information for preparing an estimate
         report by clicking the free Estimate tab provided at the top right of

@@ -13,6 +13,7 @@
     "url": "https://github.com/theahmadzai/pantherspainting.git"
   },
   "scripts": {
+    "start": "netlify dev",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
     "serve": "gatsby serve",

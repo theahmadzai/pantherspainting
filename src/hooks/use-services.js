@@ -23,7 +23,6 @@ const useServices = () => {
     title: service.title,
     slug: service.slug,
     caption: service.caption,
-    ratingCount: 3,
   }))
 }
 
