@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { Form, Input, Button, Typography } from 'antd'
+import { Form, Input, Button } from 'antd'
 import { UserOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons'
 import Success from './success'
 import Error from './error'
 import styles from './contact-form.module.less'
 
-const { Title } = Typography
 const { Item } = Form
 const { TextArea } = Input
 

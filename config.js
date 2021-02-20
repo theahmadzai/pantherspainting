@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     name: 'Panthers Painting',
     title: 'Panthers Painting Atlanta',
-    description: 'Panthers Painting Atlanta website description',
+    description: 'Panthers Painting Atlanta LLC',
     url: 'http://localhost:8000',
     logoUrl: 'static/icon.png',
   },
@@ -20,7 +20,7 @@ module.exports = {
   address: 'Office Address, Atlanta, Georgia',
 
   contacts: {
-    phone: '+1 (516) 939-5810',
+    phone: '(470)-539-3711',
     email: 'info@pantherspainting.com',
   },
 

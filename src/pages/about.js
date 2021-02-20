@@ -93,16 +93,9 @@ export default () => {
             </Col>
             <Col span={24} sm={12} md={16}>
               <Paragraph align="justify">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error,
-                unde quam cum reprehenderit in commodi deserunt consectetur
-                eligendi quas quo earum veniam minima officia laboriosam itaque
-                incidunt quasi doloremque nihil.
-              </Paragraph>
-              <Paragraph align="justify">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Mollitia, quia quam dolores qui voluptates explicabo. Aliquid
-                illo blanditiis eius alias quis. Reprehenderit exercitationem
-                laborum, facere temporibus vel quibusdam accusantium aliquid!
+                On interior painting we will consider the best quality paint and
+                will be done by professional painters. Our rates will be
+                competitive.
               </Paragraph>
             </Col>
           </Row>
@@ -115,16 +108,10 @@ export default () => {
             </Col>
             <Col span={24} sm={12} md={16}>
               <Paragraph align="justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis vero dolores libero. Dolorum vitae blanditiis eligendi
-                necessitatibus doloribus. Similique vitae earum beatae est
-                magnam ad architecto, nihil vel? Pariatur, dignissimos!
-              </Paragraph>
-              <Paragraph align="justify">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Impedit, consequuntur ab a doloribus delectus nihil adipisci rem
-                iure error ex, quia iste tempora fugit culpa aperiam facilis
-                incidunt ipsam perspiciatis!
+                On the Exterior painting the prep work will be done by pressure
+                washing and scraping to remove the old pealing paint, the gaps
+                and cracks will be caulked and will make sure all of the rotted
+                woods are replaced.
               </Paragraph>
             </Col>
           </Row>
@@ -135,18 +122,7 @@ export default () => {
               <Img fluid={fenceAndGate.sharp.fluid} />
             </Col>
             <Col span={24} sm={12} md={16}>
-              <Paragraph align="justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                deserunt sint iure veritatis consequuntur iusto aspernatur
-                exercitationem, nisi, architecto pariatur nobis, libero ducimus
-                optio fuga unde aut. Distinctio, repudiandae laudantium!
-              </Paragraph>
-              <Paragraph align="justify">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Impedit, consequuntur ab a doloribus delectus nihil adipisci rem
-                iure error ex, quia iste tempora fugit culpa aperiam facilis
-                incidunt ipsam perspiciatis!
-              </Paragraph>
+              <Paragraph align="justify"></Paragraph>
             </Col>
           </Row>
         </TabPane>
@@ -158,10 +134,8 @@ export default () => {
             Why Us?
           </Title>
           <Paragraph align="justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-            aliquid et accusantium tempore nisi doloribus asperiores atque
-            quisquam omnis, necessitatibus dolore in ab, cupiditate est ex
-            blanditiis alias minus veniam.
+            We use the best quality materials and all of our workers are
+            professionals. our customers are 100% satisfied with the work.
           </Paragraph>
         </Col>
 

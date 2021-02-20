@@ -43,22 +43,18 @@ export default () => {
           <Title level={2} className={styles.heading}>
             Have a Query?
           </Title>
-
           <Paragraph>
             Please send us a message if you have any request or referrals.
           </Paragraph>
-
           <Paragraph>
             Want to know what services do we provide? Please have a look at the
             list of services we are currently providing.
           </Paragraph>
-
           <Link to="/services">
             <Button className={styles.button} type="primary">
               Services
             </Button>
           </Link>
-
           <Img fluid={sendMessage.sharp.fluid} />
         </Col>
         <Col span={24} md={12}>
