@@ -1,12 +1,19 @@
-const { promisify } = require('util')
-const sendMailLib = require('sendmail')
+const nodemailer = require('nodemailer')
 const faunadb = require('faunadb'),
   q = faunadb.query
 
-const sendMail = promisify(sendMailLib())
-
 const client = new faunadb.Client({
   secret: process.env.FAUNADB_SERVER_SECRET,
+})
+
+let transporter = nodemailer.createTransport({
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
+  secure: process.env.MAIL_TLS,
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  },
 })
 
 exports.handler = async event => {
@@ -40,10 +47,10 @@ exports.handler = async event => {
       })
     )
 
-    await sendMail({
-      from: `"${review.name}" <no-reply@pantherspainting.com>`,
+    await transporter.sendMail({
+      from: `"Panthers Painting" <admin@pantherspainting.com>`,
       to: 'admin@pantherspainting.com',
-      subject: `New review posted under ${review.slug}`,
+      subject: `New review posted under ${review.slug} by ${review.name}`,
       html: `Review ${ref.id}: 
         <a href="http://localhost:8888/.netlify/functions/view-rating?ref=${ref.id}">View</a> 
         <a href="http://localhost:8888/.netlify/functions/approve-rating?ref=${ref.id}">Approve</a>`,
