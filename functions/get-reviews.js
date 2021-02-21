@@ -13,17 +13,26 @@ exports.handler = async event => {
     }
   }
 
+  const { slug } = event.queryStringParameters
+
+  if (!slug) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: 'Invalid input' }),
+    }
+  }
+
   try {
-    const { data: ratings } = await client.query(
+    const { data: reviews } = await client.query(
       q.Map(
-        q.Paginate(q.Match(q.Index('approved_ratings'), true)),
+        q.Paginate(q.Match(q.Index('approved_reviews_by_slug'), true, slug)),
         q.Lambda('X', q.Get(q.Var('X')))
       )
     )
 
     return {
       statusCode: 200,
-      body: JSON.stringify(ratings.map(r => r.data)),
+      body: JSON.stringify(reviews.map(r => r.data)),
     }
   } catch (error) {
     return { statusCode: 500, body: error.toString() }

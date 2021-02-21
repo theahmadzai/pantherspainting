@@ -35,7 +35,7 @@ exports.handler = async event => {
     }
 
     const { ref, data: review } = await client.query(
-      q.Create(q.Collection('ratings'), {
+      q.Create(q.Collection('reviews'), {
         data: {
           slug,
           rating,
@@ -46,15 +46,24 @@ exports.handler = async event => {
         },
       })
     )
-
-    await transporter.sendMail({
-      from: `"Panthers Painting" <admin@pantherspainting.com>`,
-      to: 'admin@pantherspainting.com',
-      subject: `New review posted under ${review.slug} by ${review.name}`,
-      html: `Review ${ref.id}: 
-        <a href="http://localhost:8888/.netlify/functions/view-rating?ref=${ref.id}">View</a> 
-        <a href="http://localhost:8888/.netlify/functions/approve-rating?ref=${ref.id}">Approve</a>`,
-    })
+    console.log(process.env.MAIL_HOST)
+    await transporter.sendMail(
+      {
+        from: `"Panthers Painting" <admin@pantherspainting.com>`,
+        to: 'admin@pantherspainting.com',
+        subject: `New review posted under ${review.slug} by ${review.name}`,
+        html: `Review ${ref.id}: 
+        <a href="https://pantherspainting.com/.netlify/functions/view-review?ref=${ref.id}">View</a> 
+        <a href="https://pantherspainting.com/.netlify/functions/approve-review?ref=${ref.id}">Approve</a>`,
+      },
+      (e, r) => {
+        if (e) {
+          console.log(e)
+          return
+        }
+        console.log(r)
+      }
+    )
 
     return {
       statusCode: 200,

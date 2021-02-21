@@ -25,7 +25,7 @@ exports.handler = async event => {
   try {
     const {
       data: { approved, approvalDate },
-    } = await client.query(q.Get(q.Ref(q.Collection('ratings'), ref)))
+    } = await client.query(q.Get(q.Ref(q.Collection('reviews'), ref)))
 
     if (approved) {
       return {
@@ -39,7 +39,7 @@ exports.handler = async event => {
     }
 
     await client.query(
-      q.Update(q.Ref(q.Collection('ratings'), ref), {
+      q.Update(q.Ref(q.Collection('reviews'), ref), {
         data: {
           approved: true,
           approvalDate: Date.now(),

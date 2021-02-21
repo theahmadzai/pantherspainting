@@ -24,7 +24,7 @@ exports.handler = async event => {
 
   try {
     const { data: review } = await client.query(
-      q.Get(q.Ref(q.Collection('ratings'), ref))
+      q.Get(q.Ref(q.Collection('reviews'), ref))
     )
 
     return {
