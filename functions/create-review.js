@@ -46,24 +46,15 @@ exports.handler = async event => {
         },
       })
     )
-    console.log(process.env.MAIL_HOST)
-    await transporter.sendMail(
-      {
-        from: `"Panthers Painting" <admin@pantherspainting.com>`,
-        to: 'admin@pantherspainting.com',
-        subject: `New review posted under ${review.slug} by ${review.name}`,
-        html: `Review ${ref.id}: 
+
+    await transporter.sendMail({
+      from: `"Panthers Painting" <admin@pantherspainting.com>`,
+      to: 'admin@pantherspainting.com',
+      subject: `New review posted under ${review.slug} by ${review.name}`,
+      html: `Review ${ref.id}: 
         <a href="https://pantherspainting.com/.netlify/functions/view-review?ref=${ref.id}">View</a> 
         <a href="https://pantherspainting.com/.netlify/functions/approve-review?ref=${ref.id}">Approve</a>`,
-      },
-      (e, r) => {
-        if (e) {
-          console.log(e)
-          return
-        }
-        console.log(r)
-      }
-    )
+    })
 
     return {
       statusCode: 200,
