@@ -9,7 +9,7 @@ import styles from './contact.module.less'
 
 const { Title, Paragraph } = Typography
 
-export default () => {
+export default function ContactPage() {
   const { contact, sendMessage } = useStaticQuery(graphql`
     query {
       contact: file(relativePath: { eq: "contact.jpg" }) {

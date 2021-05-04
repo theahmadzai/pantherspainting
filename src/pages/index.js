@@ -9,7 +9,7 @@ import styles from './index.module.less'
 
 const { Title, Paragraph } = Typography
 
-export default () => {
+export default function IndexPage() {
   const { painter } = useStaticQuery(graphql`
     query {
       painter: file(relativePath: { eq: "painter.png" }) {

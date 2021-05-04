@@ -1,31 +1,46 @@
-const path = require('path')
-const lessToJson = require('less-to-json')
-const { siteMetadata, manifest } = require('./config')
-require('dotenv').config({ path: '.env' })
+require('dotenv').config()
 
 module.exports = {
-  siteMetadata,
+  siteMetadata: {
+    name: 'Panthers Painting',
+    title: 'Panthers Painting Atlanta',
+    siteUrl: 'http://localhost:8000',
+    description: 'Panthers Painting Atlanta LLC',
+    logoUrl: 'static/icon.png',
+    address: 'Office Address, Atlanta, Georgia',
+    contacts: {
+      phone: '(470)-539-3711',
+      email: 'info@pantherspainting.com',
+    },
+    social: {
+      facebook: 'https://www.facebook.com/pantherspainting',
+      twitter: 'https://www.twitter.com/@pantherspainting',
+      instagram: 'https://www.instagram.com/pantherspainting',
+    },
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: path.join(__dirname, 'src', 'images'),
+        path: './src/images/',
       },
+      __key: 'images',
     },
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'mx3s8y7n6py9',
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: 'mx3s8y7n6py9',
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-plugin-antd',
+      resolve: 'gatsby-plugin-import',
       options: {
+        libraryName: 'antd',
         style: true,
       },
     },
@@ -34,15 +49,28 @@ module.exports = {
       options: {
         lessOptions: {
           javascriptEnabled: true,
-          modifyVars: lessToJson('src/styles/vars.less'),
+          modifyVars: {
+            '@primary-color': '#d18cf1',
+            '@font-size-base': '18px',
+            '@font-family': 'Work Sans',
+          },
         },
       },
     },
     'gatsby-plugin-minify-classnames',
     {
       resolve: 'gatsby-plugin-manifest',
-      options: manifest,
+      options: {
+        name: 'Panthers Painting Atlanta',
+        short_name: 'Panthers Painting',
+        start_url: '/',
+        background_color: '#d18cf1',
+        theme_color: '#d18cf1',
+        display: 'standalone',
+        icon: 'static/icon.png',
+      },
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
   ],
 }

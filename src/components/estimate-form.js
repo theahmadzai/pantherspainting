@@ -7,7 +7,7 @@ import styles from './estimate-form.module.less'
 const { Item } = Form
 const { TextArea } = Input
 
-const QuoteForm = () => {
+export default function QuoteForm() {
   const [formStatus, setFormStatus] = useState(0)
 
   const handleFinish = values => {
@@ -196,5 +196,3 @@ const QuoteForm = () => {
     </Form>
   )
 }
-
-export default QuoteForm

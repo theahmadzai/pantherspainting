@@ -10,17 +10,11 @@ import {
 import useSiteMetadata from '../../hooks/use-sitemetadata'
 import FooterCurve from '../svgs/footer-curve'
 import styles from './footer.module.less'
-import config from '../../../config'
 
 const { Title, Paragraph } = Typography
 
-const Footer = () => {
-  const { name, title } = useSiteMetadata()
-  const {
-    siteMetadata: { description },
-    contacts,
-    social,
-  } = config
+export default function Footer() {
+  const { name, title, description, contacts, social } = useSiteMetadata()
 
   return (
     <>
@@ -81,5 +75,3 @@ const Footer = () => {
     </>
   )
 }
-
-export default Footer

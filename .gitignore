@@ -1,5 +1,5 @@
 *.log
-.env*
+.env
 .DS_Store
 .cache
 .vscode
@@ -7,3 +7,4 @@
 vendor
 node_modules
 public
+package-lock.json

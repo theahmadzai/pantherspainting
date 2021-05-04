@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { Carousel as AntdCarousel } from 'antd'
 
-const Carousel = props => {
+export default function Carousel(props) {
   const data = useStaticQuery(graphql`
     query {
       contentfulCarousel(name: { eq: "Home" }) {
@@ -26,5 +26,3 @@ const Carousel = props => {
     </AntdCarousel>
   )
 }
-
-export default Carousel

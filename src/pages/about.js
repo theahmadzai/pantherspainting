@@ -10,13 +10,9 @@ import { Tabs } from 'antd'
 
 const { TabPane } = Tabs
 
-function callback(key) {
-  console.log(key)
-}
-
 const { Title, Paragraph } = Typography
 
-export default () => {
+export default function AboutPage() {
   const {
     about,
     aboutPainter,
@@ -85,7 +81,7 @@ export default () => {
         for its projects.
       </Paragraph>
 
-      <Tabs onChange={callback} type="card" className={styles.tabs}>
+      <Tabs type="card" className={styles.tabs}>
         <TabPane tab="Interior" key="1">
           <Row gutter={[32, 12]}>
             <Col span={24} sm={12} md={8}>

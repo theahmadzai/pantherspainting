@@ -9,7 +9,7 @@ import styles from './services.module.less'
 
 const { Title, Paragraph } = Typography
 
-export default () => {
+export default function ServicesPage() {
   const services = useServices()
 
   return (

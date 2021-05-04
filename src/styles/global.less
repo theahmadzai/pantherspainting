@@ -19,21 +19,19 @@
   color: #fff !important;
   text-align: center;
   position: relative;
-}
 
-.pageTitle::after {
-  content: '';
-  left: 50%;
-  top: calc(50% + 5rem);
-  height: 4px;
-  background: #fff;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 60%;
-}
+  &::after {
+    content: '';
+    left: 50%;
+    top: calc(50% + 5rem);
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 60%;
 
-@media screen and (min-width: 768px) {
-  .pageTitle::after {
-    top: calc(50% + 3.5rem);
+    @media screen and (min-width: 768px) {
+      top: calc(50% + 3.5rem);
+    }
   }
 }

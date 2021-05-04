@@ -8,7 +8,7 @@ import styles from './contact-form.module.less'
 const { Item } = Form
 const { TextArea } = Input
 
-const ContactForm = () => {
+export default function ContactForm() {
   const [formStatus, setFormStatus] = useState(0)
 
   const handleFinish = values => {
@@ -99,5 +99,3 @@ const ContactForm = () => {
     </Form>
   )
 }
-
-export default ContactForm

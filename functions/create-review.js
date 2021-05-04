@@ -9,7 +9,7 @@ const client = new faunadb.Client({
 let transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
   port: process.env.MAIL_PORT,
-  secure: process.env.MAIL_TLS,
+  secure: process.env.MAIL_TLS == 'true' ? true : false,
   auth: {
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS,

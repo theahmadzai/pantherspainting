@@ -3,48 +3,46 @@
   "version": "1.0.0",
   "name": "pantherspainting",
   "description": "Website for Panthers Painting Atlanta LLC",
-  "author": {
-    "name": "Javed Ahmadzai",
-    "email": "theahmadzai@hotmail.com"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/theahmadzai/pantherspainting.git"
-  },
+  "author": "Muhammad Javed",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "start": "netlify dev",
     "develop": "gatsby develop",
-    "clean": "gatsby clean",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "build": "gatsby clean && gatsby build",
-    "format": "prettier --write \"**/*.{js,css,jsx,ts,tsx,json,md}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "gatsby clean",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --quiet --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json}\""
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.2",
     "@contentful/rich-text-types": "^14.1.2",
     "antd": "^4.8.0",
     "dotenv": "^8.2.0",
+    "faunadb": "^4.2.0",
     "gatsby": "^2.25.3",
     "gatsby-background-image": "^1.1.2",
     "gatsby-image": "^2.4.20",
-    "gatsby-plugin-antd": "^2.2.0",
+    "gatsby-plugin-import": "^2.1.7",
     "gatsby-plugin-less": "^4.0.5",
     "gatsby-plugin-manifest": "^2.5.2",
     "gatsby-plugin-minify-classnames": "^0.2.0",
     "gatsby-plugin-offline": "^3.3.2",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sharp": "^2.7.1",
+    "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-source-contentful": "^2.3.49",
     "gatsby-source-filesystem": "^2.4.2",
     "gatsby-transformer-sharp": "^2.5.21",
-    "less-to-json": "^1.2.0",
+    "nodemailer": "^6.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.13.3",
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1",
@@ -53,7 +51,6 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "prettier": "2.1.1",
     "stylelint": "^13.7.2",
-    "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0"
   }

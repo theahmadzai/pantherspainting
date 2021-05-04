@@ -7,7 +7,7 @@ import EstimateForm from '../components/estimate-form'
 
 const { Title } = Typography
 
-export default () => {
+export default function FreeEstimatePage() {
   const { quote } = useStaticQuery(graphql`
     query {
       quote: file(relativePath: { eq: "quote.jpg" }) {

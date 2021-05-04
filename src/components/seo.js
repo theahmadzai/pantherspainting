@@ -2,15 +2,14 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import useSiteMetadata from '../hooks/use-sitemetadata'
 
-const SEO = ({ title, description, pathname }) => {
+export default function SEO({ title, description, pathname }) {
   const {
-    name,
     title: defaultTitle,
     description: defaultDescription,
-    url,
+    siteUrl,
   } = useSiteMetadata()
 
-  title ??= name
+  title ??= defaultTitle
   description ??= defaultDescription
   pathname ??= '/'
 
@@ -23,7 +22,7 @@ const SEO = ({ title, description, pathname }) => {
         { name: 'description', content: description },
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
-        { property: 'og:url', content: `${url}${pathname}` },
+        { property: 'og:url', content: `${siteUrl}${pathname}` },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: 'image' },
         { name: 'twitter:card', content: 'summary' },
@@ -34,5 +33,3 @@ const SEO = ({ title, description, pathname }) => {
     />
   )
 }
-
-export default SEO

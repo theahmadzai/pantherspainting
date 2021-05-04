@@ -38,10 +38,10 @@ export const query = graphql`
   }
 `
 
-const ServiceTemplate = ({
+export default function ServiceTemplate({
   data: { contentfulService: service },
   pageContext: { slug },
-}) => {
+}) {
   const [formStatus, setFormStatus] = useState(0)
   const [reviews, setReviews] = useState([])
   const [rating, setRating] = useState(5)
@@ -164,5 +164,3 @@ const ServiceTemplate = ({
     </Layout>
   )
 }
-
-export default ServiceTemplate

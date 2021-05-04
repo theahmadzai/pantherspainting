@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-const useServices = () => {
+export default function useServices() {
   const data = useStaticQuery(graphql`
     query {
       allContentfulService {
@@ -25,5 +25,3 @@ const useServices = () => {
     caption: service.caption,
   }))
 }
-
-export default useServices
