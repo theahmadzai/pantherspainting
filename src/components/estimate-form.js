@@ -10,24 +10,26 @@ const { TextArea } = Input
 
 export default function QuoteForm() {
   const [formStatus, setFormStatus] = useState(0)
-  const [images, setImages] = useState(0)
+  const [images, setImages] = useState([])
 
   const handleImagesUploaded = info => {
     setImages(info.fileList)
   }
 
   const handleFinish = values => {
-    images.forEach(image => {
-      values[image.uid] = image.originFileObj
-    })
+    const formData = new FormData()
 
-    fetch('/', {
+    Object.entries(values).forEach(([k, v]) => formData.append(k, v))
+    images.forEach(image => formData.append('images', image.originFileObj))
+
+    fetch('/.netlify/functions/send-estimate', {
       method: 'POST',
-      headers: { 'Content-Type': 'multipart/form-data' },
-      body: new URLSearchParams({ 'form-name': 'quote', ...values }).toString(),
+      body: formData,
     })
-      .then(() => setFormStatus(1))
-      .catch(() => setFormStatus(-1))
+      .then(console.log)
+      .catch(console.log)
+    // .then(() => setFormStatus(1))
+    // .catch(() => setFormStatus(-1))
   }
 
   if (formStatus === 1) return <Success />
