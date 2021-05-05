@@ -77,7 +77,6 @@ exports.handler = async event => {
       body: JSON.stringify({ message: 'Message sent.' }),
     }
   } catch (error) {
-    console.log(error.toString())
     return { statusCode: 500, body: error.toString() }
   }
 }

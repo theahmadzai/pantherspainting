@@ -26,10 +26,8 @@ export default function QuoteForm() {
       method: 'POST',
       body: formData,
     })
-      .then(console.log)
-      .catch(console.log)
-    // .then(() => setFormStatus(1))
-    // .catch(() => setFormStatus(-1))
+      .then(() => setFormStatus(1))
+      .catch(() => setFormStatus(-1))
   }
 
   if (formStatus === 1) return <Success />
