@@ -17,8 +17,14 @@ export default function QuoteForm() {
   }
 
   const handleFinish = values => {
+    const form = document.querySelector('form')
     images.forEach(image => {
       values[image.uid] = image.originFileObj
+      const input = document.createElement('input')
+      input.name = image.uid
+      input.type = 'file'
+      input.hidden = true
+      form.appendChild(input)
     })
 
     fetch('/', {
@@ -35,6 +41,7 @@ export default function QuoteForm() {
 
   return (
     <Form
+      action="/"
       className={styles.form}
       layout="vertical"
       size="large"
@@ -200,6 +207,7 @@ export default function QuoteForm() {
 
       <Item>
         <Upload
+          name="image"
           listType="picture-card"
           onChange={handleImagesUploaded}
           multiple
