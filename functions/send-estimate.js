@@ -1,5 +1,4 @@
 const parser = require('lambda-multipart-parser')
-// const Busboy = require('busboy')
 const nodemailer = require('nodemailer')
 
 const transporter = nodemailer.createTransport({
@@ -11,45 +10,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.MAIL_PASS,
   },
 })
-
-// const parseFormData = event =>
-//   new Promise((resolve, reject) => {
-//     const fields = {}
-//     const files = []
-
-//     const busboy = new Busboy({
-//       headers: {
-//         ...event.headers,
-//         'content-type':
-//           event.headers['Content-Type'] || event.headers['content-type'],
-//       },
-//     })
-
-//     busboy.on('field', (fieldName, value) => {
-//       fields[fieldName] = value
-//     })
-
-//     busboy.on('file', (fieldName, file, filename, encoding, mimetype) => {
-//       file.on('data', data => {
-//         files.push({
-//           content: data,
-//           filename: filename,
-//           contentType: mimetype,
-//         })
-//       })
-//     })
-
-//     busboy.on('error', error => reject(`Parse error: ${error}`))
-
-//     busboy.on('finish', () => {
-//       console.log({ ...fields, files })
-//       resolve({ ...fields, files })
-//     })
-
-//     busboy.write(event.body, event.isBase64Encoded ? 'base64' : 'binary')
-
-//     busboy.end()
-//   })
 
 exports.handler = async event => {
   if (event.httpMethod !== 'POST') {
@@ -72,7 +32,7 @@ exports.handler = async event => {
       state,
       description,
       files,
-    } = await parser.parse(event) //await parseFormData(event) //
+    } = await parser.parse(event)
 
     if (
       !firstname ||
