@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Row, Col, Form, Input, Button } from 'antd'
+import { Row, Col, Form, Input, Button, Upload } from 'antd'
+import { PlusOutlined } from '@ant-design/icons'
 import Success from './success'
 import Error from './error'
 import styles from './estimate-form.module.less'
@@ -9,11 +10,20 @@ const { TextArea } = Input
 
 export default function QuoteForm() {
   const [formStatus, setFormStatus] = useState(0)
+  const [images, setImages] = useState(0)
+
+  const handleImagesUploaded = info => {
+    setImages(info.fileList)
+  }
 
   const handleFinish = values => {
+    images.forEach(image => {
+      values[image.uid] = image.originFileObj
+    })
+
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: { 'Content-Type': 'multipart/form-data' },
       body: new URLSearchParams({ 'form-name': 'quote', ...values }).toString(),
     })
       .then(() => setFormStatus(1))
@@ -186,6 +196,19 @@ export default function QuoteForm() {
         ]}
       >
         <TextArea rows={6} placeholder="Additional details..." />
+      </Item>
+
+      <Item>
+        <Upload
+          listType="picture-card"
+          onChange={handleImagesUploaded}
+          multiple
+        >
+          <div>
+            <PlusOutlined />
+            <div style={{ marginTop: 8 }}>Upload</div>
+          </div>
+        </Upload>
       </Item>
 
       <Item>
