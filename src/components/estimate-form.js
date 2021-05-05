@@ -19,9 +19,9 @@ export default function QuoteForm() {
   const handleFinish = values => {
     const form = document.querySelector('form')
     images.forEach(image => {
-      values[image.uid] = image.originFileObj
+      values['picture'] = image.originFileObj
       const input = document.createElement('input')
-      input.name = image.uid
+      input.name = 'picture'
       input.type = 'file'
       input.hidden = true
       form.appendChild(input)
@@ -205,6 +205,7 @@ export default function QuoteForm() {
         <TextArea rows={6} placeholder="Additional details..." />
       </Item>
 
+      <input type="file" name="picture" />
       <Item>
         <Upload
           name="image"
