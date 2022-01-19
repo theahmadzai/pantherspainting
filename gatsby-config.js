@@ -50,7 +50,7 @@ module.exports = {
         lessOptions: {
           javascriptEnabled: true,
           modifyVars: {
-            '@primary-color': '#d18cf1',
+            '@primary-color': '#29b0fa',
             '@font-size-base': '18px',
             '@font-family': 'Work Sans',
           },
