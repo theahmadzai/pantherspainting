@@ -7,7 +7,7 @@ export default function FooterCurve() {
       viewBox="0 0 1200 120"
       xmlns="http://www.w3.org/2000/svg"
       style={{
-        fill: '#f1dbfb',
+        fill: '#29b0fa',
         width: '100%',
         height: 50,
         marginBottom: '-5px',
