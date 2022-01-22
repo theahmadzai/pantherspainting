@@ -25,9 +25,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link to="/">
-        <div style={{ width: '150px' }}>
-          <Image src="/new-logo.jpg" alt={title} preview={false} />
-        </div>
+        <Image src="/logo.png" width="160px" alt={title} preview={false} />
       </Link>
 
       <NavLinks className={styles.navDesktop} />
