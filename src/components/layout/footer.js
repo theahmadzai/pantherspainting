@@ -21,16 +21,12 @@ export default function Footer() {
       <footer className={styles.footer}>
         <Row gutter={24} className={styles.footerItems}>
           <Col span={24} md={8} className={styles.footerItem}>
-            <Title level={3} className={styles.footerItemTitle}>
-              Company
-            </Title>
+            <Title level={3}>Company</Title>
             <Paragraph>{description}</Paragraph>
           </Col>
 
           <Col span={24} md={8} className={styles.footerItem}>
-            <Title level={3} className={styles.footerItemTitle}>
-              Contact Info
-            </Title>
+            <Title level={3}>Contact Info</Title>
             <Paragraph>
               <PhoneOutlined title="Phone" />
               &nbsp;&nbsp;
@@ -44,9 +40,7 @@ export default function Footer() {
           </Col>
 
           <Col span={24} md={8} className={styles.footerItem}>
-            <Title level={3} className={styles.footerItemTitle}>
-              Get in Touch
-            </Title>
+            <Title level={3}>Get in Touch</Title>
             <Paragraph>
               Subscribe to our RSS feed or follow us on Facebook and Twitter for
               the latest content
