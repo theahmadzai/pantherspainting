@@ -204,6 +204,8 @@ export default function QuoteForm() {
           name="image"
           listType="picture-card"
           onChange={handleImagesUploaded}
+          onPreview={() => void 0}
+          customRequest={({ onSuccess, file }) => onSuccess(null, file)}
           multiple
         >
           <div>
